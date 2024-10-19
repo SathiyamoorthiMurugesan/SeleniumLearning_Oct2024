@@ -555,4 +555,22 @@ a - variable/variableName;
 
 If you want 10, you need to call 'a' only. 
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+***************************************************************
+
+Day 9 (18/10/2024)
+
+How to create a class, nested classes with different access modifiers
+How to create a interface, nested interfaces with different access modifiers
+How to create non-static methods and static methods 
+How to create variables 
+
+********************************************************************
+Day 10 (19/10/2024)
+
+Different variables
+How to create/call variables inside a method
+
+
+
+
+
