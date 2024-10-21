@@ -570,6 +570,150 @@ Day 10 (19/10/2024)
 Different variables
 How to create/call variables inside a method
 
+Variables - Its a memory location that can hold values of a specific datatype.
+
+Types of variables 
+1. Local variable - 
+	* Datatype declared/initiated within a method/constructor, for, if    -- block ({...})
+	* scope of local variable is only within the block in which the variable is declared
+	* initialization of local variable is mandatory
+	* local variables can not be static
+	{
+	int a = 10;
+	char c;
+	c = '2';
+	String sathya = "10";
+	static int b = 10; -- we can not create like this.
+	}
+	
+2. Instance variable/class variable/non-static variable
+	* Declared within a class but outside of a block ({...})
+	* Non- static variables
+	* To access instance variables, we need to create object for that class
+	
+	classA {
+	int a = 10; //class level non static variable
+	String sathya = "10"; //class level non static variable
+	
+	method1() {
+	int  aa = 10; // local variable
+	
+	sysout(sathya); // we can not use a non static like this. we need to create object
+	// it should be written as 
+	ClassA obj = new ClassA(); //object creation
+	sysout(obj.a);
+	}
+	
+	}
+	
+	
+3. static variable
+	* Declared within a class but outside of a block with "static" keyword
+	* static keyword is used with variables and methods
+	* To access this variable, dont need to create an object
+	* within a class - static can be used anywhere directly (in a static method or in non-static method)
+	* Outside class - static can be used but along with class name. (in a static method or in non-static method)
+	
+	static int a = 10;
+	static String sathya = "10";
+	public static int c = 200;
+	
+ClassA (TalukOffice) {
+
+static int a = 10;
+//a = receptionist;
+
+method1() {
+	print (a);
+}
+
+}
+
+
+ClassB (Govt hospital) {
+
+method2() {
+print (ClassA.a);
+//print (TalukOffice.receptionist)
+}
+
+
+
+
+**************************************************************************
+Day 11 (21/10/2024)
+
+*********Calling methods **********
+
+A work - method1(); -- 100 lines of codes
+
+B work - method2(); -- 100 lines of codes
+
+C work - method3(); -- 250 lines of code 
+	method3() is method1() + method2() + some other work
+
+- Reuse of methods 
+- duplicates and redundant codes - remove
+
+AS OF NOW, WE HAVE SEEN TWO KIND OF METHODS
+1. static methods 
+2. non-static methods
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+//	We can create object of a class in another class 
+//		* (eg: creating object for Class22 inside of CallingMethods1)
+	
+//	For reference: 
+//		* Which method you are going to call is matters
+//		* Which class you are going to call also matters
+//		* static methods/variables always belongs to the class
+	
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	
+//	With in A class
+//		* Calling a static method from non-static method 
+//				- Direct
+//		* Calling a static method from static method 
+//				- Direct
+//		* Calling a non-static method from non-static method 
+//				- Direct/ Object Creation
+//		* Calling a non-static method from static method 
+//				- Object Creation
+	
+//	withInAClass(from)		static			non-static
+//	static 				    DIRECT          OBJECT CREATION
+//	non-static              DIRECT          DIRECT/OBJECT CREATION
+	
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+	
+//	Outside a class
+//	* Calling a static method of another class from non-static method 
+//			- ClassName + static method name
+//	* Calling a static method of another class from static method 
+//			- ClassName + static method name
+//	* Calling a non-static method of another class from non-static method 
+//			- Object Creation
+//	* Calling a non-static method of another class from static method 
+//			- Object Creation
+	
+//	OutsideOfClass		static			   non-static
+//	static 				CLASSNAME          OBJECT CREATION
+//	non-static          CLASSNAME          OBJECT CREATION
+	
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	
+//	CONCLUSTION
+//	When you are going to call a 
+//		* Non-static - Object Creation
+//		* static - direct(within a class) or along with class name (outside of class)
+
+***********************************************************************************
+
+
+
+
 
 
 

@@ -110,6 +110,7 @@ public class A4Variables {
 		
 		
 //		trying to use static variables inside a non static method
+//		ccc;
 		System.out.println(ccc);
 		System.out.println(bbb);
 		
