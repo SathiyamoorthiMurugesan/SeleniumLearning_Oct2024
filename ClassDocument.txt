@@ -711,6 +711,87 @@ AS OF NOW, WE HAVE SEEN TWO KIND OF METHODS
 
 ***********************************************************************************
 
+Day 12 (22/10/2024)
+
+Access Modifier
+	* It defines where and who can use a method/variable/class
+	1) default
+	2) private
+	3) protected
+	4) public 
+	
+	Syntax = accessModifier dataType variableName/variable = variableValue (Could be local variable or non-static variable)
+		   = static accessModifier dataType variableName/variable = variableValue (class level variable or static variable)
+		   
+	int a = 10; - default (no need to mention "default" word
+	private int a = 10;
+	protected int a = 10;
+	public int a = 10;
+	
+	
+	packageA
+		class10 ( int a = 10)
+			Class11 (same package of Class10 and sub class of Class10)
+		class20 (same package but non sub of Class10)
+	packageX
+		classA (diff package and non sub class of Class10)
+		classB10 (diff package and sub class of Class10)
+		
+	
+How Class10 and other Classes can use variable 'a' based on its access modifier.
+
+                                     				| default |  private  | protected  | public 
+													|         |           |            | 
+class10 ( int a = 10)                				| yes     | yes       | yes        | yes
+									 				|         |           |            |
+same package but sub class (class11)			 	| yes     | no        | yes        | yes 
+									 				|         |           |            |
+same package but NON sub class (class20) 			| yes     | no        | yes        | yes
+									 				|         |           |            |
+different package but sub class (classB10)			| no      | no        | yes        | yes
+									 				|         |           |            |
+different package but NON sub class (classA)		| no      | no        | no         | yes
+
+ClassA {
+
+int a = 10;
+private int b = 100;
+protected int c = 20;
+public int d = 15
+
+method1() {
+ClassA obj = new ClassA();
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
+}
+
+}
+
+ClassAA following ClassA {
+or
+ClassAA extends ClassA {
+
+ClassA obj = new ClassA();
+method1() {
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
+}
+}
+
+ClassB {
+
+ClassA obj = new ClassA();
+method1() {
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
+}
+}
 
 
 
