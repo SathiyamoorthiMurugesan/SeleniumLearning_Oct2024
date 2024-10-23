@@ -794,7 +794,157 @@ print (obj.d);
 }
 
 
+*******************************************************************************
+Day 13 (23/10/2024)
 
+Calling static variable/method in different classes
+
+ClassA 
+	static int a = 10;
+
+
+within class 
+	static method - direct
+	non-static - direct 
+
+Same package 
+
+1) Sub class 
+	static method - direct or with class name?
+	non-static - direct or with class name?
+
+2) Non sub class 
+	static method - with class name
+	non-static - with class name 
+
+Different package 
+
+1) Sub class 
+	static method - direct or with class name?
+	non-static - direct or with class name?
+
+2) Non sub class 
+	static method - with class name
+	non-static - with class name 
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+JVM, JRE, JDK
+
+our codes - English - .java
+compile - .class - byte code (machine recognizable language). 
+			it is available in target folder.
+
+
+JVM - Java Virtual Machine 
+* This can not be seen
+* it starts the execution(creates Runtime Environment)
+* It first checks for main method and executes the codes inside the main method
+* It creates the code flow, in java the flow is called "Thread"  - "main Thread"
+* JVM provides run time environment in which Java byte codes can be executed
+* loads code| verifies code| execute code| provides run time environment
+
+JRE - Java Runtime Environment
+* Physically exist
+* Contains JVM and set of libraries
+* JVM uses these libraries to execute the codes
+
+JDK - Java Developement kit
+* It contains JVM, set of libraries and dev tools (JRE + dev tools)
+* Used to develop and execute the codes
+* Dev tools + debugger + compiler + java doc
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Java keywords
+new, class, interface, abstract, all the access modifiers, data types, static, this, super, throw, throws, try, 
+catch, final, finally, data type, if, for, while, break, continue, switch, case;
+
+* dont create variables and method names using java predefined keywords 
+* Java is case sensitive language (Sathya, sathya)
+* java is a OOPs(Object Oriented Program) language
+	* Java is not a 100% OOPs language
+
+Naming conversion in java
+* Should not use above things
+* homepage - homePage (Camel case)
+
+If you are creating package, method name
+* should start with small letter followed by camel case
+
+if you are creating class or interface
+* should start with Captial letter followed by camel case
+
+thisIsPackageName 
+ThisIsClassName
+ThisIsInterfaceName
+
+thisIsMethodName
+thisIsObjectName or ThisIsObjectName
+thisIsVariableName
+
+package, method, object, variable - starts with small letter
+Class, Interface, Object - starts with Capital letter
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Methods in Java
+
+1) main method (static method)
+
+2) static method
+3) non static method
+
+4) method with parameter
+5) method without parameter
+
+6) method with return type
+7) method without return type
+
+Currently we focus on 2 & 3;
+
+public void method1() {
+
+}
+
+public static void method2() {
+
+}
+
+**** Using local variable outside the method**********
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Calling one method from another method
+
+* How calling a method differentiate within a class or outside class
+
+With in a class
+1. calling static method/variable from non-static method - direct call
+2. calling static method/variable from static method - direct call
+3. calling non-static method/variable from non-static method - direct call or object creation
+4. calling non-static method/variable from static method - Object creation 
+
+
+Outside class
+	1. calling static method/variable from non static method - using className
+	2. calling static method/variable from static method - using className
+	3. calling non-static method/variable from non-static method - Creating Object
+	4. calling non-static method/variable from static method - Creating Object 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+//		Two ways to bring out the local variable value, outside of that method
+//		return type concept  - later 
+//		By assigning local variable value to class level static or non static variables
+
+&&&&&&&&&&&&&&&&&&&
+
+How to read object's suggestions.
+
+**************************************************************
 
 
 
