@@ -946,6 +946,154 @@ How to read object's suggestions.
 
 **************************************************************
 
+Day 14 (24/10/2024)
+
+
+Object creation - to call non-static members
+
+Within class we can have both static and non-static member. 
+
+1) We create object only for class.
+2) In order to access non static members of a class, we create object and through the object,
+		we can access the non-statics(methods and variables)
+3) We can create object of a class inside the same class or in any other class
+4) We can create multiple Objects for a single class (within class or outside class)
+
+Syntax:-
+ClassName objectVariableName = new ClassName();
+ClassA anyName = new ClassName();
+
+GovtHospital medicalCamp = new GovtHospital();
+GovtHospital eyeCamp = new GovtHospital();
+Inside PoliceStation class  - GovtHospital medicalCamp = new GovtHospital();
+
+Objection definition - 
+Whenever we create an Object for a class, whatever non-static members(methods and variables) 
+present in that class will be copied and stored in heap memory.
+ 
+We call non-static members through Object creation only.
+				
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+What is heap memory? 
+
+Memory Management
+
+Heap memory
+Stack memory
+SCP (String Constant Pool - A part of heap memory)
+
+ClassA obj1 = new ClassA();
+
+ClassA - Reference Class Name
+Obj1 - Object variable
+new = key word to create an obj
+ClassA() - Constructor or Object creation or instance creation
+
+* Whenever we create an object for a class, whatever non-static variables and methods present in that class will be copied to heap memory
+* Object variable or instance variable, is stored in stack memory 
+* We can create multiple object for a single class
+
+public class ClassA {
+
+int a = 10; 
+static int c = 20;
+
+public void method1() {
+	ClassA obj1 = new ClassA();
+	sysout(obj1.a);
+	
+	ClassA obj3 = new ClassA();
+	ClassA obj4 = new ClassA();
+}
+
+public void method2() {
+	ClassA obj2 = new ClassA();
+	sysout(obj1.a);
+}
+
+}
+
+	stack memory			Heap memory
+	obj1.				a = 10; method1(), method2();
+	obj2				a = 10; method1(), method2();
+	obj3				a = 10; method1(), method2(); 
+	
+	* In heap memory, only one copy of every class is available if you create multiple object 
+		for that class. So that we can save the memory space in heap memory.
+	
+	
+public class ClassA {
+int a = 10;
+}
+
+int a = 10; //class level non static
+* a = 10 - When it comes to variable,  the variable and its value, 
+				both will be stored in specific stack memory 
+
+SCP:- String constant pool (its a part of Heap memory)
+There are two ways to create String in Java
+1. String Literals
+2. Object creation
+
+String Literals
+	String Sathya = "1000"; 
+	
+Sathya - Stack
+1000 - SCP of Heap memory 
+	
+Object creation for String
+	ClassA obj1 = new ClassA(); //its simple object creation
+	String Sathya = new String("1000"); //parameterized object creation
+
+Sathya - Stack memeory
+1000 and non static methods/variables in String class - Heap memory 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+*****We will see it later******
+
+String immutable:-
+
+String str = "Sathya";
+String str1 = "Sathya";
+String str2 = "Ranjith";
+
+In Memory it looks like
+stack 		SCP
+str			Sathya 
+str1 		
+str2 		Ranjith
+
+str1 = str1 + str2;
+str1 = SathyaRanjith
+
+After manipulation what we think
+stack 		SCP
+str			SathyaRanjith
+str1 		
+str2 		Ranjith
+
+But what really happens in SCP memory.
+Whenever we manipulate String variable, String value never get changed. 
+Simply a new value is assigned to the manipulated String variable.
+
+stack 		SCP
+str			Sathya
+str1 		SathyaRanjith
+str2 		Ranjith
+
+str = str1 + str2;
+
+In SCP, after manipulation
+
+stack 		SCP
+str			SathyaRanjithRanjith ("Sathya" - will be in SCP but no one is looking for him)
+str1 		SathyaRanjith
+str2 		Ranjith
+
+Unused Object "Sathya" in the memory will be cleared after sometime by Java Garbage collection process
+
 
 
 
