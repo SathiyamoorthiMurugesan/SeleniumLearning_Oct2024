@@ -1,11 +1,11 @@
 package A1basicsOfJava;
 
-public class UsingLocalVariableOutisideTheMethod {
+public class A7UsingLocalVariableOutisideTheMethod {
 	
 	int c = 10;
 
 	public static void main(String[] args) {
-		UsingLocalVariableOutisideTheMethod	obj = new UsingLocalVariableOutisideTheMethod();
+		A7UsingLocalVariableOutisideTheMethod	obj = new A7UsingLocalVariableOutisideTheMethod();
 		System.out.println(obj.getLocalVariableValueToOutside(100)+100);
 		
 		System.out.println(obj.c);
