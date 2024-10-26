@@ -1094,6 +1094,27 @@ str2 		Ranjith
 
 Unused Object "Sathya" in the memory will be cleared after sometime by Java Garbage collection process
 
+****************************************************
+
+Day 15 (25/10/2024)
+
+Data types as variables:-
+Variables in Java
+
+Based on where we create our data types or variable names, we categories variables in 3 types 
+
+1. Local variable
+2. Class level or instance variable or non-static variable
+3. static variable
+
+Variables as parameters in detail
+	* Parameterized variables are considered as local variables.
+	* It helped to run a single method with multiple values of given data type.
+	* Parameterized variables can be anything, such as Primitive, non primitive, Class, Interface, Object
+	* Generally we can not write two or methods with same method name. 
+		But we can achieve it using parameters
+
+
 
 
 

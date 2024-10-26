@@ -2,6 +2,13 @@ package A1basicsOfJava;
 
 public class A8VariableAsParameter {
 	
+//	Variables as parameters in detail
+//	* Parameterized variables are considered as local variables.
+//	* It helped to run a single method with multiple values of given data type.
+//	* Parameterized variables can be anything, such as Primitive, non primitive, Class, Interface, Object
+//	* Generally we can not write two or methods with same method name. 
+//		But we can achieve it using parameters
+	
 	int b = 20;
 	static int c = 30;
 	

@@ -14,8 +14,8 @@
 
 package A1basicsOfJava;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ReturnDefinition {
 
@@ -53,7 +53,7 @@ public class ReturnDefinition {
 		test.method6(aaa);
 		test.method6(test.method3(200));
 		
-		WebDriver driver = new ChromeDriver();
+//		WebDriver driver = new ChromeDriver();
 
 	}
 
