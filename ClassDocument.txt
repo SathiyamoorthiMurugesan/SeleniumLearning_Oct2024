@@ -1115,6 +1115,21 @@ Variables as parameters in detail
 		But we can achieve it using parameters
 
 
+****************************************************
+
+Day 16 (26/10/2024)
+
+Variables as return type
+
+
+
+
+****************************************************
+
+Day 17 (28/10/2024)
+
+
+
 
 
 
