@@ -1128,6 +1128,19 @@ Variables as return type
 
 Day 17 (28/10/2024)
 
+Class a variable and return type
+
+
+****************************************************
+
+Day 18 (29/10/2024)
+
+Class a variable and return type - rewind
+
+
+
+
+
 
 
 
