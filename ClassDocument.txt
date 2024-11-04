@@ -1137,6 +1137,23 @@ Day 18 (29/10/2024)
 
 Class a variable and return type - rewind
 
+homework about parameters and return type
+How to read property file
+
+****************************************************
+
+Day 19 (04/11/2024)
+
+Constructor basics
+
+Final variable
+	* Usage of Constructor in Final variable
+	
+
+
+
+
+
 
 
 

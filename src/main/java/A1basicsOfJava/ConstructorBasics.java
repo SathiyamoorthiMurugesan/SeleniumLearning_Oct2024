@@ -15,7 +15,7 @@ package A1basicsOfJava;
 // * When the default constructor was implicitly present and you create a Constructor with parameter
 //		* Then the default constructor will vanish. 
 //		* Which means, we can not create a object for the class using default constructor.
-// * We can create a constructor using public, private, project and default(do not use the keyword)
+// * We can create a constructor using public, private, protected and default(do not use the keyword)
 //		* When Constructors is private, we can not create object of that class in other classes.
 
 public class ConstructorBasics {
@@ -46,6 +46,8 @@ public class ConstructorBasics {
 		ConstructorBasics obj1 = new ConstructorBasics(10);
 		
 		ConstructorBasics obj2 = new ConstructorBasics(null);
+		
+//		AAA obj10 = new AAA();
 
 	}
 
@@ -65,16 +67,28 @@ class AAA {
 //		
 //	}
 //	
-//	private AAA() {
-//		
-//	}
+	private AAA() {
+		
+	}
 //	
 //	protected AAA() {
 //		
 //	}
 //	
-	AAA() {
-		
+//	AAA() {
+//		
+//	}
+//	
+//	AAA(int a) {
+//		
+//	}
+//	
+//	private AAA(String str) {
+//		
+//	}
+	
+	public void method10() {
+		AAA obj = new AAA();
 	}
 }
 
