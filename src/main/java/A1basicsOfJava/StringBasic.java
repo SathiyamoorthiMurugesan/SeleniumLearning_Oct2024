@@ -22,6 +22,12 @@ package A1basicsOfJava;
 
 public class StringBasic {
 	
+	int c;//declaration
+	
+	StringBasic xyz;//declaration
+	
+	static StringBasic cd; //declaration
+	
 	public static void main(String[] args) {
 		
 	
@@ -34,7 +40,8 @@ public class StringBasic {
 	String strB = "      "; //blank
 	String strC = "11";
 	String strD = "Hello My World";
-	String strE = "Hello World, this is \"Sathya\"";
+	String strE = "Hello World, My name is \"Sathya\"";
+//	String strE = "Hello World, this is \"Sathya\"";
 	System.out.println(strE);
 	
 	String str1 = "* if my String is "+"Sathya"+", length - 6, index starts with 0. Then last index is 5 or I can say length -1;";
@@ -48,7 +55,35 @@ public class StringBasic {
 	String ss = "Sathiyamoorthi";
 	//Sathiya"m"oorthi
 	String ss1 = "Sathiya\"m\"oorthi"; 
+	System.out.println(ss1);
 	
+	String abc = null;
+	System.out.println(abc);
+	
+	StringBasic obj = new StringBasic(); //Object creation //declaration + initialization
+	int a = 20;//declaration + initialization
+	
+	System.out.println(obj.c);
+	
+	System.out.println(obj.xyz);
+	
+	obj.c = 20; //initialization
+	System.out.println(obj.c);
+	obj.xyz = new StringBasic();//initialization
+	
+	cd = new StringBasic();
+	
+	obj.method1();
+	
+	System.out.println(obj.c);
+	
+	
+	}
+	
+	public void method1() {
+//		cd = new StringBasic();
+//		StringBasic obj = new StringBasic();
+		System.out.println(cd.c);
 	}
 	
 

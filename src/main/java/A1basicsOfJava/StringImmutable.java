@@ -12,7 +12,7 @@ String str1 = "Sathya";
 String str2 = "Ranjith";
 
 stack 		SCP
-str			"Sathya" - 
+str			"Sathya" 
 str1 		
 str2 		Ranjith
 
