@@ -1156,7 +1156,52 @@ Day 20 (05/11/2024)
 String basics
 String immutable 
 
-***********************************************
+**************************************************
+Day 20 (06/11/2024)
+
+TOPICs WE LEANRED TILL NOW
+
+Class
+Interface
+variables
+Access Modifier
+static
+Method
+	static or non-static 
+	parameter or without parameter
+	return type or without return type
+Data type - Variables
+	Local Variable
+	Non static variable
+	static variable
+Object Creation
+Constructor
+Final variable
+String basic and String immutable, why?
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Interface in detail
+
+	* class follows interface - implements 
+	* interface follows interface - extends 
+	* interface never follows class
+	* interface - body less methods
+	
+Java 1.1 - (Java 1)
+Java 1.2 - (Java 2)
+.
+.
+.
+.
+Java 1.8 - (Java 8)
+Java 9
+Java 10
+Java 11
+
+
+
+
 
 
 
