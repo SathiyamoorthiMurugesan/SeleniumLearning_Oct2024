@@ -17,8 +17,8 @@ package A2interfaceInJava;
 
 //We can not create a static abstract/bodyless method in an interface but we can create it as a method.
 //Interface let us to have methods with body but those methods should be either static or default method
-//We can have static method in interface and we can call it in a following class by using interface name.
-//We can access default method in implemented class by using object
+//We can have static method in interface and we can call it in a following class/classes by using interface name.
+//We can access default method in implemented class by using creating object of the class
 //We create object for a class using interface as a reference 
 //We can give an interface as a return type
 //We can create a interface within a interface

@@ -1199,6 +1199,15 @@ Java 9
 Java 10
 Java 11
 
+**************************************************
+Day 21 (07/11/2024)
+
+how to connect one interface to another interface
+
+How to connect one interface with class 
+
+
+
 
 
 

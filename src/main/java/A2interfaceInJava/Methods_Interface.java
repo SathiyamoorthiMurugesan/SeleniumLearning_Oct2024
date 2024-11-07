@@ -49,6 +49,14 @@ public interface Methods_Interface {
 	static void method13() {
 
 	}
+	
+//	private static void method14() {
+//		
+//	}
+	
+//	protected static void method15() {
+//		
+//	}
 
 //	default static void method14() {
 //
