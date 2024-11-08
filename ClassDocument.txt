@@ -1211,7 +1211,47 @@ Day 22 (08/11/2024)
 
 Abstract class 
 
+interface RBI {
 
+public void giveHomeLoanToGovtSchoolStudents();
+
+}
+
+
+public class HDFC implements RBI {
+
+public void giveHomeLoanToGovtSchoolStudents() {
+	//student with more than 70% marks in all subjects
+}
+
+}
+
+public class SBI implements RBI {
+
+public void giveHomeLoanToGovtSchoolStudents() {
+	//student with more than 300 marks in total;
+}
+
+}
+
+abstract class Rules {
+
+public void giveHomeLoanToGovtSchoolStudents() {
+// all student with pass marks in all subject;
+
+}
+
+public void method1() {
+Rules rules = new Rules();
+rules.giveHomeLoanToGovtSchoolStudents();
+rules.newRules();
+}
+
+public abstract void newRule();
+
+
+}
+*****************************************************************
 
 
 
