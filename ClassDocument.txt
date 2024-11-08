@@ -1206,6 +1206,11 @@ how to connect one interface to another interface
 
 How to connect one interface with class 
 
+**************************************************
+Day 22 (08/11/2024)
+
+Abstract class 
+
 
 
 
