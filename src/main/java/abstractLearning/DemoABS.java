@@ -3,7 +3,11 @@ package abstractLearning;
 public abstract class DemoABS {
 	
 	public DemoABS() {
+		int a = 10;
+		String str = "Sa";
 		
+//		str.
+//		a.
 	}
 
 	public int a = 10;
