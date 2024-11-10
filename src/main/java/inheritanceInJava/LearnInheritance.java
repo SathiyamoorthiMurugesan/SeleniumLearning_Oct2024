@@ -1,10 +1,9 @@
 package inheritanceInJava;
 
-import java.io.Serializable;
-import java.util.AbstractList;
-import java.util.Collection;
-
-public class LearnInheritance implements InheritanceInterface1{
+public class LearnInheritance implements InheritanceInterface1 {
+	
+//	Every class in java is always extended by Object class
+//		* Object class is the root class of Java
 	
 //	Parent class/ Super class
 //	Child class/ Sub class
@@ -79,8 +78,6 @@ public class LearnInheritance implements InheritanceInterface1{
 //		public class Throwable implements Serializable;
 	
 	
-//	Every class in java is always extended by Object class
-
 	public static void main(String[] args) {
 		
 //		InheritanceInterface1 obj1 = new InheritanceInterface1();
