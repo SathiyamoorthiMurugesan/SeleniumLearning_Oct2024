@@ -1253,7 +1253,7 @@ public abstract void newRule();
 }
 *****************************************************************
 
-Day 23 (08/11/2024)
+Day 23 (09/11/2024) && Day 24 (10/11/2024) 
 
 Is Java OOPs language? explain?
 
@@ -1286,6 +1286,65 @@ Diamond problem
 	ClassA extends ClassB
 	ClassB extends ClassC
 	ClassC extends ClassA
+
+
+*****************************************************************
+
+Day 25 (11/11/2024)
+
+Polymorphism in detail
+	Overloading
+	Overriding
+	
+Method signature - Method name and with/without parameter is called method signature. 
+
+Method syntax
+AccessModifier static/non-static returntype methodName(Parameters) {
+}
+
+*********Method Overloading********
+public class ABC {
+
+public void method1() {
+
+}
+
+public void method1(int a) {
+
+}
+
+public void goToShop() {
+syso("Buy something");
+}
+
+public void goToShop(String soapName) {
+syso("Buy Hamam soap");
+}
+
+public void goToShop(int soapAmount) {
+syso("Buy 10 rupees soap");
+}
+
+public void vandalurZooEntry(String noOfAdults, int price) {
+
+}
+
+public void vandalurZooEntry(String noOfAdults, int price, String noOfChild, int price) {
+
+}
+
+public void vandalurZooEntry(String noOfStudents, int price, String schoolName) {
+
+}
+
+public void vandalurZooEntry() {
+
+}
+
+
+
+}
+
 
 
 
