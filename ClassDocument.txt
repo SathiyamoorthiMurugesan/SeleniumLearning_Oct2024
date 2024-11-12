@@ -1341,9 +1341,36 @@ public void vandalurZooEntry() {
 
 }
 
-
-
 }
+
+***************************************************************
+Day 26 (12/11/2024)
+
+Overriding in Java
+
+1. Overloading - Compile time polymorphism
+	1. Within the class or same class 
+	2. Method name should same
+	3. No. of parameter, type of parameter and order of parameter
+
+
+2. Overriding - Runtime polymorphism
+	1. Between two classes 
+		* Those two classes should be in a relationship (Parent and child) - Inheritance
+	2. method name should be same
+	3. method parameters also should be same
+	4. Object creation plays an important role
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Keywords in Java
+
+static
+final
+Understanding println() method
+
+********************************************************************
+
 
 
 
