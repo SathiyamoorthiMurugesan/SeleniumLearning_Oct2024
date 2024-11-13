@@ -8,7 +8,7 @@ package keywordsInJava;
 //	* Also by using this., we can assign runtime values to instance variables
 //* When we call a non static method from another non static method in a same class, "this." is used implicitly while calling
 //	* calling a method(), is same as this.method() with in a same class. Only for calling non-static from static, we need to create object
-
+//* We can not use this. inside the static method
 
 //* We can use this(), to call other constructors from any constructors within a class.
 //* this() should be used within a constructor only. Means, we can not use it in methods.
@@ -47,7 +47,7 @@ package keywordsInJava;
 //	* then we need to pass the parameter to super() by overriding it. e.g(super(5) or super("Sathya"))
 
 //* From child class constructor, we can either call parent class constructor(super()) or child class constructor(this()).
-
+//* The only time, we can use super() and this()/this(parameter) is, when super is implicitly present.
 
 
 
