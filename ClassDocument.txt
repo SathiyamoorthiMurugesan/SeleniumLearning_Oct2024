@@ -1371,12 +1371,47 @@ Understanding println() method
 
 ********************************************************************
 
+Day 27 (13/11/2024)
+
+super and this in detail
+super() and this() in detail
+
+********************************************************************
+
+Day 28 (14/11/2024)
+
+Constructor in detail
+
+1) should not have return type
+2) Cons. name should be same as class name and belongs to the class
+3) each class has a default cons. and its present implicitly
+4) during obj creation constructor call would happen
+5) Constructor can not be static 
+6) Cons. is private, we can not create obj of class in other classes
+7) We can parameterize constructor
+8) inside constructor we can call methods and create variables
+9) within a class, we can use this() to call one cons. from other
+10) every child class cons. has super() as a first line of code, in order to call the parent default cons.
+11) We can create a final variable without initiating but we need to initialize in all the constructors
+12) When default cons. is implicitly present and we create a parameterized cons., then default cons. will vanish.
+13) interface and abstract class do not have constructors
 
 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+Blocks in Java
 
+static block
 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+try catch block
+
+Error, Exception 
+
+Exception class1 
+
+***************************************************************
 
 
 
