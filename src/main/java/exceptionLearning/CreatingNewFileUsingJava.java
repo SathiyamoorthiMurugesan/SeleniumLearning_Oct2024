@@ -13,33 +13,22 @@ public class CreatingNewFileUsingJava {
 //		File file1 = new File(str);
 //		File file1 = new File("");
 //		File file1 = new File("test.txt");
-//		File file1 = new File("C:\\Users\\Ca\\git\\Tamil_Java\\src\\test\\java\\exceptionLearning\\exception.txt");
-		File file1 = new File("C:\\Users\\Ca\\git\\Tamil_Java\\src\\test\\java\\exceptionLearning\\exception1.txt");
+		File file1 = new File("C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\src\\main\\java\\exceptionLearning\\exception.txt");
+		File file2 = new File("C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\src\\main\\java\\exceptionLearning\\exception1.txt");
+		File file3 = new File("C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\src\\main\\java\\exceptionLearning\\exception2.txt");
 		//to read file we use FileInputStream class.. but if there is no file then we get FileNotFoundException;
 		try {
-			FileInputStream fis = new FileInputStream(file1);
+			FileInputStream fis = new FileInputStream(file3);
 		} catch (FileNotFoundException e) {
-			file1.createNewFile();
-			FileInputStream fis = new FileInputStream(file1);
+//			file1.createNewFile();
+//			FileInputStream fis = new FileInputStream(file1);
+			System.out.println("aaaa");
 		}
-//		System.out.println(fis.read());
+		System.out.println("Hello");
 	}
-	
-	
-//	public static void main(String[] args) {
-//	 File myObj = new File("filename1.txt");
-//   try {
-//     File myObj1 = new File("filename.txt");
-//     if (myObj.createNewFile()) {
-//       System.out.println("File created: " + myObj.getName());
-//     } else {
-//       System.out.println("File already exists.");
-//     }
-//   } catch (IOException e) {
-//     System.out.println("An error occurred.");
-//     e.printStackTrace();
-//   }
-// }
-
 
 }
+
+//File file1 = new File("C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\src\\main\\java\\exceptionLearning\\exception.txt");
+//FileInputStream fis = new FileInputStream(file3);
+//System.out.println("Hello");

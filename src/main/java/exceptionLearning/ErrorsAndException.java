@@ -16,11 +16,11 @@
 //	* In Java, Exception is a class and its extends Throwable class. 
 //	* eg: for exception - RunTimeException(ArithmaticException), IOException, SQLException, NullPointerException, FileNotFoundException
 //	* All the above exceptions extends to --> Exception class --> Throwable class
-// 	* RunTime Exceptions needs to be handled with try catch block, such as Arithmatic Exception, Nullpointer Exception
+// 	* ONLY RunTime Exceptions needs to be handled with try catch block, such as Arithmatic Exception, Nullpointer Exception
 //	* Whatever the code causing the error should be present in try block
 //	* The exception in try block code needs to be caught in catch block
 //	* A single try block can have multiple catch block
-//	* Its always good practice to put exact exception as catch block at first place, then put exception class as a catch in next catch block
+//	* Its always good practice to put exact exception as catch block at first place, then put Exception parent class as a catch in next catch block
 //	* If try block get executed and throws an exception, then respective catch block will be executed
 //	* If try block get executed and throws an exception but we did not put respective exception catch block, that time parent exception catch block will run
 //	* Whether catch block executed or not, finally block will get executed after try block
@@ -35,7 +35,7 @@
 //	4) try, catch, catch, etc... 
 //	5) try, catch, finally
 //	6) try, catch, catch, etc... finally
-//	7) we can not use finally alone
+//	7) we can not use catch or finally alone
 //	8) try should not be alone, it should be associated with either catch or finally or catches or catch AND finally or catches  AND finally.
 
 //* Exception Hirarchy: https://www.javatpoint.com/exception-handling-in-java
