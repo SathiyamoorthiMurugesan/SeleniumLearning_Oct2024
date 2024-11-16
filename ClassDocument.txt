@@ -1418,6 +1418,164 @@ Day 29 (15/11/2024)
 Exception class2
 
 
+*********************************************************
+Day 30 (16/11/2024)
+
+Custom Exception 
+
+class ABC extends Exception {
+
+ public ABC() {
+	syso("User name is not as per the regulations, please enter a valid user name as per the rules");        
+    }
+
+
+  }
+
+public void LoginPage() {
+
+public void testLogin(String userName) throws ABC {
+
+if(username is empty) {
+syso("User name is empty, please enter a valid user name");
+throw new ABC();
+}
+
+if(username total character is less than 10 character) {
+syso("User name is not valid, please enter a valid user name");
+}
+
+
+}
+
+public void MyTestCase {
+
+
+public void TC01_CreateFullTimeEmployee() throws ABC {
+
+LoginPage obj = new LoginPage();
+obj.testLogin("");
+
+}
+
+
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+if condition
+
+Basic Syntax 
+if(condition) {
+
+}
+
+if(condition1 && condition2) {
+
+}
+
+if(condition1 || condition2) {
+
+}
+
+if((condition1 || condition2) && condition3) {
+
+condition1 - true and condition3 true
+condition1 - fail condition2 - true and condition3 true
+condition1 - fail condition2 - fail - if wont run
+condition3 - fail - if wont run
+
+}
+
+if(condition1) {
+do some work
+	if(condition2) {
+	
+	}
+}
+
+if(condition) {
+work1
+work2
+}
+
+if(condition) 
+work1
+work2
+
+if(condition1) {
+do some work;
+}
+else {
+ do the other work
+}
+
+if(condition1) {
+go by bus
+}
+else if(condition2) { 
+check train ticket
+}
+else {
+go by car
+}
+
+if(condition1) {
+go by bus
+}
+else if(condition2) { 
+if(condition21) {
+}
+else {
+}
+
+}
+else {
+go by car
+}
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+For loop
+
+public class ABC {
+
+
+main() {
+	method1();
+	method1();
+	method1();
+	method1();
+	method1();
+	method1();
+}
+
+
+public void method1() {
+	//do some work
+}
+
+SYNTAX
+for(initiation;condition;increment/decrement) {
+
+}
+
+for(initiation; condition;) {
+
+increment/decrement;
+}
+
+declaration; 
+
+for(assign; condition;increment/decrement) {
+
+}
+
+
+
+
+
 
 
 
