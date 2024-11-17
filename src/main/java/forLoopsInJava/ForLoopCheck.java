@@ -41,12 +41,76 @@ public class ForLoopCheck {
 //			method1();
 //		}
 
+//		for (int i = 1; i <= 5; i++) {
+//			method1();
+//			for (int j = 1; j <= 5; j++) {
+//				method2();
+//			}
+//		}
+
+//		for (int i = 1; i <= 5; i++) {
+//			if(i!=2)
+//			method1();
+//		}
+
+//		for (int i = 1; i <= 5; i++) {
+//			if(i==4) {
+//			break;
+//			}
+//			method1();
+//		}
+
+//		for (int i = 1; i <= 5; i++) {
+//			System.out.println("i value is "+i);
+//			for (int j = 1; j <= 5; j++) {
+//				if(i==j) {
+//					break;
+//				}
+//				System.out.println("***j value is "+j);
+//			}
+//		}
+
+//		for (int i = 1; i <= 5; i++) {
+//			if (i == 2) {
+//				continue;
+////			break;
+//			} else {
+//				System.out.println("*" + i);
+//			}
+//			System.out.println("Hii");
+//		}
+//		
+//		System.out.println("**************");
+//
+//		for (int i = 1; i <= 5; i++) {
+//			if (i != 2) {
+//				System.out.println("*" + i);
+//			}
+//			System.out.println("Hii");
+//		}
+
+//		for (int i = 1; i <= 5; i++) {
+//			System.out.println("i value is " + i);
+//			for (int j = 1; j <= 5; j++) {
+//				System.out.println("***j value is " + j + "****");
+//			}
+//		}
+
 		for (int i = 1; i <= 5; i++) {
-			method1();
+
 			for (int j = 1; j <= 5; j++) {
-				method2();
+//				System.out.println("*");
+//				System.out.print("*"); //*****
+				System.out.print("* "); //* * * * * 
+				
 			}
+			System.out.println();
+//			System.out.print();
 		}
+		
+//		System.out.print("Hiii");
+//		System.out.println("***");
+//		System.out.println("Hello");
 
 	}
 
