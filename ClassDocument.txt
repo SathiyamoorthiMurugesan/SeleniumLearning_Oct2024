@@ -1573,10 +1573,104 @@ for(assign; condition;increment/decrement) {
 }
 
 
+*********************************************************
+Day 31 (17/11/2024)
+
+For loop class1
 
 
 
+*********************************************************
+Day 32 (18/11/2024)
 
+For loop class2
+
+Two for loops
+Parent for loop - control row
+inner for loop - control column values of the row
+i and j value initialization
+for loop's condition
+when and where to use print() and println() methods
+You may need to use flag - true or false
+you may need to use temp variable 
+if condition
+
+
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * * 
+
+* 
+* *
+* * *
+* * * *
+* * * * *
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+#
+2 #
+3 3 #
+4 4 4 #
+5 5 5 5 #
+
+# 2 3 4 5 
+1 # 3 4 5 
+1 2 # 4 5 
+1 2 3 # 5 
+1 2 3 4 #
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Switch condition
+
+switch(parameter) {
+
+case 1:
+syso
+
+case 2:
+syso
+
+default:
+syso
+
+}
+
+For the each values of the given parameter, if we are going to do a distinct work, then user SWITCH
+
+Switch or if
+Monday - go by bus
+Tuesday - go by car 
+Wednesday - Go by Auto
+
+if
+Monday or Wednesday - Auto
+Monday or Tuesday  - Car
+
+switch(day)
+case "Monday":
+Auto
+break;
+
+case "Wednesday":
+Auto
+break;
+
+*********************************************************
+Day 33 (19/11/2024)
 
 
 
