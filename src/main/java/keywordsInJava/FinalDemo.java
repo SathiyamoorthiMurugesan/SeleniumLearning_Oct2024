@@ -11,7 +11,14 @@
 //*	Variables declared as final in class level must be initialized whereas variables declared as final inside a method need not be initialized
 //* Variables declared as final in class level need to initialized in all the constructors if they are not initialized while declaring
 
-package keywordsInJava;
+//finalize() method
+
+//The finalize() method in Java is a special method that the garbage collector calls on an object 
+//when it determines that there are no more references to the object. 
+//This method is defined in the Object class and can be overridden by any class. 
+//The purpose of the finalize() method is to give an object the opportunity to clean up resources 
+//before it is reclaimed by the garbage collector.
+//package keywordsInJava;
 
 public class FinalDemo extends ParentFinal implements FinalInterface {
 	

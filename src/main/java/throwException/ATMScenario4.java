@@ -11,8 +11,8 @@ public class ATMScenario4 extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	public static void ATM() {
+		System.out.println("			*****Welcome to HDFC ATM*****	");
 		try {
-			System.out.println("			*****Welcome to HDFC ATM*****	");
 			throw new RefreshFailedException("ATM out of service try our nearest ATM for service");
 		}
 //			throw new RefreshFailedException();

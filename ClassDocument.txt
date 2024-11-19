@@ -1632,6 +1632,10 @@ if condition
 1 2 3 # 5 
 1 2 3 4 #
 
+For loop patterns
+
+Debug 
+
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 Switch condition
@@ -1671,6 +1675,48 @@ break;
 
 *********************************************************
 Day 33 (19/11/2024)
+
+throw throws and Throwable
+
+final finally finalize()
+
+Custom Exceptions
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Scanner class
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+array basics1 
+
+int a = 10;
+int b = 20;
+int c = 20;
+int d = 30;
+int e = 20;
+
+array 
+
+datatype arrayVariableName[] = new Datatype[how many values you are going to store]
+datatype[] arrayVariableName = new Datatype[how many values you are going to store]
+
+int arr[] = new int[5];
+
+Array size = 5; length = 5;
+
+
+10; index - 0
+
+arr[0] = 10;
+arr[1] = 20;
+.
+.
+arr[4] = 50;
+
+
+*********************************************************
+Day 34 (20/11/2024)
 
 
 
