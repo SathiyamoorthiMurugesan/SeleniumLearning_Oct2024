@@ -1718,7 +1718,15 @@ arr[4] = 50;
 *********************************************************
 Day 34 (20/11/2024)
 
+array in detail
 
+How to write dynamic/generic methods
+
+try to use debug while working with array. 
+
+
+*********************************************************
+Day 35 (21/11/2024)
 
 
 
