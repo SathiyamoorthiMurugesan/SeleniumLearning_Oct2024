@@ -1,23 +1,67 @@
 package forLoopsInJava;
 
 public class ForEach {
-	
+
 //	Should be visited after array
 
+//	public static void main(int a) {
+//	public static void main(int[] a) {
 	public static void main(String[] args) {
 
-//		one plus 
-//		5
+//		one plus - maker 
+//		all one plus phones - made
+		
+//		OnePlus
+//
+//		Phone
 //		5T
 //		6
 //		6T
 //		7
 //		7T
-//		10T pro
-//		25T 
+//		10
+//		10T
+//		10Pro
 //
-//		one plus - maker 
-//		all one plus phones - made
+//		TV
+//		TV01
+//		TV02
+//		TV03
+//		TV04
+//
+//		Headset
+//		Z1
+//		Z2
+//		Z3
+//
+//		OnePlus { Phone, TV, Headset}
+//		OnePlus { {5T, 6, 6T}, {TV01, TV02. TV03, TV04} , {Z1,Z2,Z3} }
+//
+//		for(int i = 0; i<phone.length; i++) {
+//		syso(phone[i]);
+//		}
+//
+//		for(Phone each: Oneplus) {
+//		syso(each);
+//		}
+//
+//		for(TV eachTV: OnePlus) {
+//		syso(eachTV)
+//		}
+//
+//
+//		TV01
+//		TV02
+//		TV03
+//		TV04
+//
+//
+//		for(Headset each: OnePlus) {
+//		syso(each)
+//		}
+//		Z1
+//		Z2
+//		Z3
 //
 //		int a ;
 //		tvs onePlus;
@@ -41,19 +85,20 @@ public class ForEach {
 //		That time we can not use normal for loop. We could use forEach only.
 //* 
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < onePlus.length; i++) {
 			System.out.println(onePlus[i]);
 		}
-		
 
 		System.out.println("For each**********");
 		for (String eachPhone : onePlus) {
 			System.out.println(eachPhone);
 		}
 
-		int a[] = { 1, 2, 3, 4, 5 };
+		int a[] = { 1, 2, 3, 4, 5 }; // 1x5
 
-		for (int eachValue: a) {
+		int b[] = {};
+
+		for (int eachValue : a) {
 			System.out.println(eachValue);
 		}
 
@@ -61,6 +106,31 @@ public class ForEach {
 			System.out.println(a[i]);
 		}
 
+		System.out.println("Difference between for and forloop using an example");
+// 		We can not use for each loop for index based operation (we can use but we need to do a extra work)
+//		To iterate array values in reverse order we can not use for each loop
+
+//		To find whether the "a" array has a value 3.
+
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == 3) {
+				System.out.println("This array has value 3");
+			}
+		}
+		
+		for(int each: a) {
+			if(each == 3) {
+				System.out.println("This array has value 3");
+			}
+		}
+		
+//		Check whether value '3' present at index 3 of int array 'a'
+		
+		if(a[3] == 3) {
+			System.out.println("Hi");
+		}
+		
+		
 	}
 
 }

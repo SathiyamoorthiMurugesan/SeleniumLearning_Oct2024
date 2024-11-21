@@ -1728,5 +1728,10 @@ try to use debug while working with array.
 *********************************************************
 Day 35 (21/11/2024)
 
+For each loop
+
+main method explanation
+
+
 
 
