@@ -70,24 +70,46 @@ public class MultiArrayDeclaration {
 //		syso{arr1[i][j]);
 //	}
 //	}
-	
+
 	public static void main(String[] args) {
 //		test();
 //		Arrays
-		int arr[][] = { {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5} };
+		int arr[][] = { { 1, 2, 3, 4, 5 }, { 1, 2, 3, 4, 5 }, { 1, 2, 3, 4, 5 } };
 		System.out.println(arr.length);
-		
+
 //		for (int i = 0; i < arr.length; i++) {
 //			for (int j = 0; j < arr[i].length; j++) {
 //				System.out.println(arr[i][j]);
 //			}
 //		}
-		
+
 		print2DArray(arr);
-		
+
 		print2DArrayLikeMatrix(arr);
-		
+
 		print2DArray(arr, 0, 4);
+
+		for (int[] eachArr : arr) {
+			for (int eachVal : eachArr) {
+				System.out.println(eachVal);
+			}
+		}
+	}
+	
+	public void printMultiDimArray(int[][] array) {
+		for (int[] eachArr : array) {
+			for (int eachVal : eachArr) {
+				System.out.println(eachVal);
+			}
+		}
+	}
+	
+	public void printMultiDimArray(String[][] array) {
+		for (String[] eachArr : array) {
+			for (String eachVal : eachArr) {
+				System.out.println(eachVal);
+			}
+		}
 	}
 
 	public static void print2DArray(int arr[][]) {
@@ -97,25 +119,25 @@ public class MultiArrayDeclaration {
 			}
 		}
 	}
-	
+
 	public static void print2DArrayLikeMatrix(int arr[][]) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print(arr[i][j]+" ");
+				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
 		}
 	}
-	
+
 	public static void print2DArray(int arr[][], int rowIndex, int columnIndex) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				if(i==rowIndex && j ==columnIndex)
-				System.out.println(arr[i][j]);
+				if (i == rowIndex && j == columnIndex)
+					System.out.println(arr[i][j]);
 			}
 		}
 	}
-	
+
 	public static void test() {
 
 //		Single Dimentional array
@@ -134,11 +156,11 @@ public class MultiArrayDeclaration {
 		arr7[0][1] = 3;
 		arr7[1][0] = 4;
 		arr7[1][1] = 5;
-		
+
 //		1356
 //		3541
 //		3541
-		
+
 		System.out.println("Print array values");
 		print2DArray(arr7);
 		System.out.println("****************");
@@ -180,6 +202,6 @@ public class MultiArrayDeclaration {
 		System.out.println("******");
 		print2DArray(arr6, 1, 1);
 		print2DArrayLikeMatrix(arr6);
-	
+
 	}
 }

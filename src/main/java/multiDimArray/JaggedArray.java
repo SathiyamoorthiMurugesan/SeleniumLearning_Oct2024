@@ -27,21 +27,40 @@ public class JaggedArray {
 				{"Shiva", "Tamil"},
 				{"Syed", "Sasi", "Ragul"}
 		};
-		System.out.println(batchMates.length);
-		System.out.println(batchMates[2].length);
+		System.out.println(batchMates.length); //3
+		System.out.println(batchMates[1].length); //2
 		
 //		System.out.println(batchMates);
 //		System.out.println(Arrays.toString(batchMates));
 		
-		for(String[] eachBatchMates:batchMates) {
-			System.out.println(Arrays.toString(eachBatchMates));
-		}
+//		for(String[] eachBatchMates:batchMates) {
+//			System.out.println(Arrays.toString(eachBatchMates));
+//		}
 		
 		for(int i=0; i<batchMates.length;i++) {
 			for(int j=0;j<batchMates[i].length;j++) {
 				System.out.println(batchMates[i][j]);
 			}
 		}
+		
+		String[] abc = {"a", "b", "c"};
+		
+		System.out.println(abc);
+		
+		for(String each: abc) {
+			System.out.println(each);
+		}
+		
+		for(String[] eachArray: batchMates) { //batchMates - array of String arrays
+//			eachArray - its a String array
+//			System.out.println(eachArray);
+			for(String eachValue: eachArray) {
+				System.out.println(eachValue);
+			}
+		}
+		
+		MultiArrayDeclaration obj = new MultiArrayDeclaration();
+		obj.printMultiDimArray(batchMates);
 	}
 
 }
