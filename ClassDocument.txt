@@ -1732,6 +1732,26 @@ For each loop
 
 main method explanation
 
+*********************************************************
+Day 36 (22/11/2024)
+
+for each 
+jagged array 
+multi dim array
+
+Arrays class
+
+*********************************************************
+Day 37 (23/11/2024)
+
+array interview coding questions 
+
+String class 
+
+Home work for String class and array and Arrays
+
+
+
 
 
 
