@@ -1750,6 +1750,18 @@ String class
 
 Home work for String class and array and Arrays
 
+*********************************************************
+Day 38 (24/11/2024)
+
+Thread basic
+
+getters and setters
+
+String interview coding questions
+
+
+
+
 
 
 

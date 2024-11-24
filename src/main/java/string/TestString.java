@@ -1,11 +1,83 @@
 package string;
 
+import array.ArrayLearning;
+
 public class TestString {
 
 	/**
 	 * @param args
 	 */
+	
 	public static void main(String[] args) {
+//		String str = "Sathya";
+//		
+//		//charAt(int index);
+//		
+////		System.out.print(str.charAt(5));
+////		System.out.print(str.charAt(4));
+////		System.out.print(str.charAt(3));
+////		System.out.print(str.charAt(2));
+////		System.out.print(str.charAt(1));
+////		System.out.print(str.charAt(0));
+//		
+//		for(int i= str.length()-1; i>=0; i--) {
+//			System.out.print(str.charAt(i));
+//		}
+//		
+//		System.out.println();
+//		
+//		//StringBuilder
+//		//StringBuffer
+//		
+////		split(String regEx)
+//		
+//		String[] splitedString = str.split("thya");
+//		ArrayLearning obj = new ArrayLearning();
+//		obj.printArrayValuesUsingBasicForLoop(splitedString);
+//		
+//		String[] toReverse = str.split(""); //String[] toReverse = {"S", "a", "t", "h", "y", "a"};
+//		obj.printArrayValuesUsingBasicForLoop(toReverse);
+//		
+//		String dummy1 = "";
+//		for(int i= toReverse.length-1; i>=0; i--) {
+////			System.out.print(toReverse[i]);
+//			dummy1 = dummy1 + toReverse[i];
+//		}
+//		System.out.println(dummy1);
+//		
+//		//toCharArray()
+//		
+//		char[] charArr = str.toCharArray(); // char[] charArr = {'S', 'a', 't', 'h', 'y', 'a'};
+//		for(int i= charArr.length-1; i>=0; i--) {
+//			System.out.print(charArr[i]);
+//		}
+//		System.out.println();
+//		
+//		String str1 = "Java is an Object Oriented Programming Language";
+//		System.out.println(str1.length());
+//		String[] wordSplit = str1.split(" ");
+//		System.out.println(wordSplit.length);
+//		obj.printArrayValuesUsingBasicForLoop(wordSplit);
+		
+		
+		String str2 = "Java is an Object Oriented Programming Language";
+		String[] wordSplit2 = str2.split(" ");
+		
+		String reversedWords = "";
+		for(String eachWord: wordSplit2) {
+			String reversedLetters = "";
+//			System.out.println(reversedLetters);
+			String[] eachLetter = eachWord.split("");
+			for(int i = eachLetter.length-1; i>=0; i--) {
+				reversedLetters = reversedLetters + eachLetter[i];
+			}
+//			System.out.println(reversedLetters);
+			reversedWords = reversedWords +reversedLetters + " ";
+		}
+		System.out.println(reversedWords);
+		
+	}
+	public static void main1(String[] args) {
 		
 		String str = "Vinothini";
 		
