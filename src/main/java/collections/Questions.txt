@@ -1,0 +1,92 @@
+ArrayList:
+Questions link - https://www.java67.com/2015/06/20-java-arraylist-interview-questions.html
+
+	1) How to add all objects in a single ArrayList?
+		ArrayList list = new ArrayList();
+	2) How to add specific/particular object in a ArrayList?
+		ArrayList <Integer> list1 = new ArrayList <Integer> ();
+		ArrayList <String> list2 = new ArrayList <String> ();
+	3) What are the different ways to iterate an ArrayList?
+		a) for loop
+		b) Enhanced for loop, ie for each
+		c) Iterator
+		d) forEach()
+	4) How to reverse an ArrayList?
+		By using reverse() method in Collections Class
+	5) How to sort an ArrayList?
+		By using sort() method in Collections Class
+	6) what are the different ways to reverse an ArrayList?
+		a) By using reverse() method in Collections Class
+		b) By using ListIterator // ListIterator will traverse from last
+	7) How to validate elements in ArrayList?
+	   By using forloop/foreach loop and checking in if condition, if that object is in the ArrayList
+	8) How to validate an element in ArrayList and replace with some other element?
+	   validate -> By using forloop/foreach loop and in if condition we can check that object is present
+	   replace -> once the object is found, use set() method to replace the element.
+	9) How do you convert an ArrayList to array and vice versa?
+	 	ArrayList to Array -> by using toArray() method
+	 	array to ArrayList -> By using asList() method
+	10)	How do you convert Set to ArrayList and vice versa
+		By Using ArrayList Constructor() with Set Collection as parameter
+			Set<String> AS = new HashSet<String>(10); 
+			ArrayList<String> AS1 = new ArrayList<String>(AS);
+	11) How forEachRemaining() method works?
+		This is similar to forEach() method.
+		By using Iterator() method and then using forEachRemaining() method.
+	12) How to compare an ArrayList with array?
+		There are few ways
+			a) equals()
+			b) removeAll()
+	13)	How to remove duplicates from ArrayList in Java?
+		There are multiple ways
+			a) Convert ArrayList to Set, as Set does not allow duplicates
+			b) Create new ArrayList and put only unique objects from first ArrayList to new ArrayList by using for loops
+	14) How to Synchronize ArrayList in Java with Example
+	15) When to use ArrayList and LinkedList in Java? (Answer)
+	16) Difference between ArrayList and HashSet in Java? (Answer)
+	17) How to create and initialize ArrayList in one line? (Answer)
+			List<String> coolStringList = Arrays.asList("Java", "Scala", "Groovy");	
+ 	18) How to convert ArrayList to String in Java?
+			a) By using toString() method
+			b) String arraylistToString = StringUtils.collectionToCommaDelimitedString(ArrayListName);
+			c) String arraylistToString = StringUtils.collectionToDelimitedString(ArrayListName, "|");
+	19) How to get a sublist from ArrayList in Java?
+			By using subList() method
+	20) Difference between length() of array and size() of ArrayList in Java?
+	21) How to remove objects from ArrayList in Java?
+    22) How to make ArrayList read-only in Java?
+    23) How to sort ArrayList in descending order in Java?
+			By using the Collections.reverseComparator() method.
+	24) How to convert Object into Integer?
+	25) How to remove duplicates from array
+			a) take int array
+			b) convert each int into Integer
+			c) add those Integer to an ArrayList
+			d) convert the ArrayList into HashSet
+	26) lambda expression
+	27) RegEx - regular expression
+				[a, z]
+				[A, Z]
+				[0, 9]
+				[@, .]
+			test@gmail.com
+			
+				 		
+			
+			
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+		
+		

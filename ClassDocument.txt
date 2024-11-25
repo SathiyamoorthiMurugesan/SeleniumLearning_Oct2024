@@ -1757,8 +1757,32 @@ Thread basic
 
 getters and setters
 
+String builder and String buffer
+
 String interview coding questions
 
+
+1) reverse a string - 5 technique
+2) count total words  in a sentence
+3) reverse each words in a sentence
+4) count each words/letters in a sentence or word respectively
+
+*********************************************************
+Day 39 (25/11/2024)
+
+Why Java is not 100% OOPs language is because of primitive data types.
+
+Wrapper classes 
+int - Integer
+char - Character
+double - Double
+boolean - Boolean
+
+Introduction to collection
+
+Collection Hierarchy
+
+ArrayList and HashSet
 
 
 
