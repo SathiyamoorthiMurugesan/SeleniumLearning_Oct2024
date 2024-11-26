@@ -19,7 +19,7 @@
 	 * 	Useful methods in ArrayList
 	 * 
 	 * 
-	 * 		All the methods declared in Collection and List interfaces are implemented in this class and along with that we have below methods
+	 * 		All the methods declared in Collection and List interfaces are implemented in this class and along with that ArrayList have below methods
 	 * 
 	 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Collection Interface methods $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* size();
@@ -103,7 +103,7 @@
 	 *			- This class has some methos such as getFense(), trySplit(), etc..
 	 *
 	 */
-	
+
 //	ArrayList
 //	LinkedList
 //	HashSet
@@ -123,62 +123,122 @@ import array.DemoArray;
 public class ArrayListDemo {
 
 	public static void main(String[] args) {
-		
+
 		List<Integer> list = new ArrayList<Integer>();
 		ArrayList<Integer> list2 = new ArrayList<Integer>();
 		ArrayList<Integer> list1 = new ArrayList<Integer>(10);
-		
+
 		list2.add(20);
 		list2.add(10);
 		list2.add(20);
 		list2.add(null);
 		list2.add(null);
-		
+
 		System.out.println(list2);
-		
-		for(int i = 0; i<list2.size(); i++) {
+
+		System.out.println(list2.get(0));
+		System.out.println(list2.get(4));
+
+		System.out.println("Iterating ArrayList using basic for loop");
+		for (int i = 0; i < list2.size(); i++) {
 			System.out.println(list2.get(i));
 		}
-		
-		
-		for(Integer each: list2) {
+
+		System.out.println("Iterating ArrayList using for each loop");
+		for (Integer each : list2) {
 			System.out.println(each);
 		}
-		
+
+		System.out.println("Iterating ArrayList using Iterator");
 		Iterator<Integer> ite = list2.iterator();
-		while(ite.hasNext()) {
+		while (ite.hasNext()) {
 			System.out.println(ite.next());
 		}
-		
-		Spliterator<Integer>  spIte = list2.spliterator();
-		
+
+		Spliterator<Integer> spIte = list2.spliterator();
+
 		System.out.println("Iterate Arraylist using List Iterator");
 		ListIterator<Integer> liIte = list2.listIterator();
-		
+
 		System.out.println(liIte.nextIndex());
 		System.out.println(liIte.previousIndex());
-		
-		while(liIte.hasNext()) {
+
+		while (liIte.hasNext()) {
 			System.out.println(liIte.next());
 		}
-		
+
 		System.out.println(liIte.nextIndex());
 		System.out.println(liIte.previousIndex());
-		
-		while(liIte.hasPrevious()) {
-			System.out.println(liIte.previous());
+
+		ListIterator<Integer> liIte1 = list2.listIterator();
+		System.out.println(liIte1.nextIndex());
+		System.out.println(liIte1.previousIndex());
+
+		System.out.println("List Iterator Has Previous method");
+		ListIterator<Integer> listIteratorCheck = list2.listIterator();
+
+		while (listIteratorCheck.hasNext()) {
+			System.out.println(listIteratorCheck.next());
+		}
+
+		while (listIteratorCheck.hasPrevious()) {
+			System.out.println(listIteratorCheck.previous());
+		}
+
+		System.out.println("ArrayList toArray() method");
+		Object[] myListToArray = list2.toArray();
+		for(Object abc : myListToArray) {
+			System.out.println(abc);
 		}
 		
-		System.out.println(liIte.nextIndex());
-		System.out.println(liIte.previousIndex());
+		System.out.println("ArrayList methods practice");
 		
+		test();
 		
-		Object[] abc = list2.toArray();
-//		Integer[] abc = (Integer[]) list2.toArray();
-		
-		DemoArray obj = new DemoArray();
-		
-		
+
 	}
 
+	public static void test() {
+		
+		ArrayList<Integer> AI = new ArrayList<Integer>();
+		
+		AI.add(10);
+		AI.add(20);
+		AI.add(50);
+		AI.add(40);
+		
+		System.out.println(AI);
+		
+		
+		AI.add(1, null);
+		
+		System.out.println(AI);
+		
+		ArrayList<Integer> A2 = new ArrayList<Integer>();
+		
+		A2.addAll(AI);
+		System.out.println(A2);
+		
+		ArrayList<Integer> A3 = new ArrayList<Integer>();
+		System.out.println(A3.isEmpty());
+		A3.add(11);
+		A3.add(22);
+		A3.add(55);
+		A3.add(44);
+		
+//		A3.addAll(2, AI);
+		System.out.println(A3);
+		
+		System.out.println(A3.contains(55));
+		
+		System.out.println(A3.indexOf(22));
+		
+		System.out.println(A3.get(0));
+		
+		System.out.println(A3.set(3, 66));
+		System.out.println(A3);
+		
+		System.out.println(A3.isEmpty());
+
+	}
 }
