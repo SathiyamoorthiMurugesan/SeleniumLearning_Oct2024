@@ -1782,8 +1782,30 @@ Introduction to collection
 
 Collection Hierarchy
 
-ArrayList and HashSet
+ArrayList and HashSet basics
 
+*********************************************************
+Day 40 (26/11/2024)
+
+ArrayList and HashSet in Detail
+
+
+*** Home work****
+Count no. of letters in a String
+Count no. of words in a Sentence
+
+How to read and write in a property file
+How to read a excel using Apache POI API and Fillo API
+
+Interview questions
+array, String, Collection 
+	* Sort 
+	* Reverse
+	* Count duplicate
+	* Remove duplicate
+	
+
+*********************************************************
 
 
 
