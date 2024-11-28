@@ -3,6 +3,8 @@ package collections;
 import java.util.HashSet;
 
 public class PracticeCollectionInterviewQuestions {
+	
+//	Collections
 
 	public static void main(String[] args) {
 		String str = "Sathiyamoorthi Murugesan";

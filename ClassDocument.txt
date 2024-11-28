@@ -1807,6 +1807,130 @@ array, String, Collection
 
 *********************************************************
 
+Day 41 (28/11/2024)
+
+HashMap in detail
+
+List - Ordered, allows duplicate and multiple null value is allowed 
+	ArrayList<Integer> list = new ArrayList<Integer>();
+	List<Integer> list1 = new ArrayList<Integer>();
+	
+Set - Unordered, does not allow duplicate and only one null is allowed
+	HashSet<Integer> set = new HashSet<Integer>();
+	Set<Integer> set1 = new HashSet<Integer>();
+	
+
+Sathya - TCS 
+Nirmal - CTS 
+Partha - Wipro
+
+Map 
+
+Map - Interface
+HashMap - Class
+
+Key - Value pair
+
+Key - Works like Set 
+Value - Works like List 
+
+HashMap<String, String> map = new HashMap<String, String>();
+Map<String, String> map = new HashMap<String, String>();
+
+
+Create a excel with  headers and rows 
+Store the headers and given row's values in a map.
+
+Count repeated letters/words in a word/sentence respectively. 
+here also you can use map.
+
+a = 2;
+b = 1
+
+Sathiyamoorthi - count no. of letters in this word
+Pseudocode 
+	* seperate each letters in a sentence by using split("") or charAt(index) or toCharArray();
+	* now we have a String or char array.
+	* declare a an arraylist
+	* use two for loops 
+	* in parent for loop initalise a variable count = 1;
+	* if the letter is not present inside the ArrayList, then only, we will go through child for loop
+	* within child for loop, you have to use if condition to check array[i] == array[j]
+	* When the above if condition passes
+		* increase the count;
+	* once you check the each letter,  within parent for loop, add that letter a[i] to an ArrayList
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Collections Class
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+How do you read a excel file using apache poi 
+
+Where is the excel is present - path and name of the excel
+Which extension to be opened - is it xls or xlsx
+Which sheet? identity the sheet using index or name
+Which row 
+In that row what is the column? 
+In that row, in that column is that cell storing String or number? 
+	if its number, get numeric cell value
+	if its string, get String cell value
+
+
+1) File file = new File(excelFilePath)
+2) FileInputStream fis = new FileInputStream(file);
+3) .xls = HSSFWorkbook workbook = new HSSFWorkbook(fis))
+		workbook.getSheetAt(0);
+   .xlsx = XSSFWorkbook workbook = new XSSFWorkbook(fis))
+	workbook.getSheetAt(0);
+4)   for (Row row : sheet)
+5) 	for (Cell cell : row)
+
+public class ExcelReader {
+    public static void main(String[] args) {
+        String excelFilePath = "example.xlsx"; // Path to your Excel file
+        try (FileInputStream fis = new FileInputStream(new File(excelFilePath));
+             XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
+
+            XSSFSheet sheet = workbook.getSheetAt(0); // Get the first sheet
+
+            for (Row row : sheet) { // Iterate through each row
+                for (Cell cell : row) { // Iterate through each cell in the row
+                    switch (cell.getCellType()) {
+                        case STRING:
+                            System.out.print(cell.getStringCellValue() + "\t");
+                            break;
+                        case NUMERIC:
+                            System.out.print(cell.getNumericCellValue() + "\t");
+                            break;
+                        case BOOLEAN:
+                            System.out.print(cell.getBooleanCellValue() + "\t");
+                            break;
+                        case FORMULA:
+                            System.out.print(cell.getCellFormula() + "\t");
+                            break;
+                        default:
+                            System.out.print("Unknown Cell Type\t");
+                    }
+                }
+                System.out.println(); // Move to the next line for each row
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
