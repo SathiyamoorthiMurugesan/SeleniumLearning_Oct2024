@@ -1806,7 +1806,6 @@ array, String, Collection
 	
 
 *********************************************************
-
 Day 41 (28/11/2024)
 
 HashMap in detail
@@ -1924,7 +1923,365 @@ public class ExcelReader {
     }
 }
 
+*********************************************************
+Day 42 (04/12/2024)
 
+* What is Software Testing -SDLC and STLC
+* What is functional Testing
+* What is regression testing
+* Where do we need the automation most? Regression.
+
+
+
+What is window based or mac based application
+What is Web-Application
+
+What is browser - Basic functionalities in browser 
+What is Web-Based application
+	* What are the basic operation 
+	* What is elements
+	
+
+
+
+Selenium Basics
+
+Why we need automation - saves Time and Man power
+Benefits
+Different Automation tools and Editor
+Automation tools 
+	* Selenium
+	* UFT (QTP)
+	* PlayWrite
+	* RPA - Robotic process automation
+	
+Editor 
+	* Eclipse
+	* STS - Sprint Tool Suite
+	* InteliJ
+	* Visual Studio
+	
+Front end development tools and backend application tools
+
+Front End:
+	* HTML
+	* CSS
+	* Java, JavaScript
+	* Angular JS
+	* .Net
+	
+Back End
+	* Java/JavaScript/Angular/.Net
+	* Database management
+	* Cloud
+	* Source Code Management tools (SCM) - Git, Bit Bucket, AWS, Azure
+
+Difference between Web Browser and Web application
+	Web Browser
+		* Chrome
+		* Edge
+		* Firefox
+		* HTML Browser
+		* headleass browser
+	Web application
+		* Facebook
+		* Flipkart
+		* HDFC website
+		* Jira
+		
+What and all we see in a browser
+	* URL bar
+	* Minimize button
+	* Maximize button
+	* New tab
+	* Close 
+	* New window
+	* Forward
+	* Backward
+	* Refresh
+	
+* what are the actions we do on a browser
+
+browser open
+url enter
+new tab open
+tab close 
+min 
+max
+entire browser close
+scroll
+zoom
+navigate - back, forward, refresh
+
+With in application what do we do
+
+application launch - url type
+text enter
+button click
+check box click
+radio box click
+drop down
+links click
+Text read/verify
+Tab title
+Mouse hover
+double click
+Right click
+Date choose
+Drag and drop
+File upload
+Verification/Assert 
+page load speed/time(synchronization)
+Keyboard
+pop up
+	alert
+	tab
+	web alert like info screen
+	Desktop window
+frames
+wait
+WebTable
+
+		
+What and all we see in a web application (Textbox, checkbox, drop down, button, radio button, link, text, image, video,..etc)
+What are the actions we do in an application (click, write, drag and drop, scroll)
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+* In manual testing, we do the testing 
+* In Automation, who would work as a tester - WebDriver
+
+WebDriver - interface
+
+* WebDriver is nothing but us(TESTERs).
+* The main properties of a browser are created as methods inside WebDriver interface
+
+
+Selenium Hierarchy:
+	SearchContext - interface
+	WebDriver - interface (Basic actions we do on the Browser are written in this interface)
+	RemoteWebDriver - Class
+	ChromeDriver, EdgeDriver, FirefoxDriver, SafariDriver - Class
+	
+interface SearchContext {
+}
+
+interface WebDriver extends SearchContext {
+
+}
+
+class RemoteWebDriver implements WebDriver {
+
+}
+
+class ChromeDriver extends RemoteWebDriver {
+
+}
+	
+*********************************************************
+Day 43 (05/12/2024)
+	
+************* WebDriver methods **************** 
+
+get(String url)
+  * In this method only we pass application URL
+getCurrentUrl()
+	* It gives currently focused window's URL. So that we can validate against requirement that, URL is correct 
+close()
+ 	* Closes the currently focused window
+quit()
+	* Closes all the window's opened during the session
+getPageSource()
+	*
+
+@override
+findElement()
+findElements()
+
+getTitle()
+	* Gives the title of the window (tab tile) 
+getWindowHandle()
+	* It gives current window's handle
+	* Its good practice to use getWindowHandle() method, before using getWindowHandles() method
+	* This methods return type is String
+	
+getWindowHandles()
+	* It gives all window's handles opened during that session
+	* This methods return type is Set<String>
+
+
+TargetLocator switchTo()
+	WebDriver frame(int index);
+	WebDriver frame(String nameOrId);
+	WebDriver frame(WebElement frameElement);
+	WebDriver parentFrame();
+
+	TargetLocator TL = WebDriver.switchTo();
+	TL.frame(0);
+	
+	WebDriver.switchTo().frame(0);
+	
+	1) find the frame - means identify the element for the frame
+		- we can identify the frame using 3 things.
+			1. using index
+			2. frameName
+			3. by finding element for the frame
+	2) switchTo().frame()
+	3) do some action on any element inside the frame 
+	4) switchTo().defaultContent();
+	
+	
+	WebDriver window(String nameOrHandle);
+		****WebDriver.switchTo().window();*******
+		
+		String parentWindowHandle = WebDriver.getWindowHandle();
+		Set<String> allWindowHandles = WebDriver.getWindowHandles();
+		for(String eachWindowHandle : allWindowHandles) {
+			if(!eachWindowHandle.equals(parentWindowHandle)) {
+				WebDriver.switchTo().window(eachWindowHandle);
+				}
+			}
+		
+	WebDriver newWindow(WindowType typeHint);
+	WebDriver defaultContent();
+	WebElement activeElement();
+
+
+
+	Alert alert();
+		dismiss();
+		accept();
+		getText();
+		sendKeys();
+		
+switchTo().frame()
+switchTo().window()
+switchTo().alert()
+switchTo().newWindow()
+
+
+TargetLocator TL = WebDriver.switchTo();
+	Alert al = TL.alert();
+	al.accept();
+	
+	WebDriver.switchTo().alert().accept();
+	
+
+switchTo().alert().dismiss();
+switchTo().alert().accept();
+switchTo().alert().getText().toUpperCase();
+
+WebDriver methods 
+
+Navigation navigate();
+	* back()
+	* forward()
+	* to(String url)
+	* to(URL url)
+	* refresh()
+	
+WebDriver.navigate().back();
+WebDriver.navigate().to("www.faceBook.com");
+	
+Options manage()
+	* Timeouts timeouts()
+		* implicitWait()
+	* Window window()
+		* setWindow()
+		* maximize()
+		* minimize()
+		* fullScreen()
+	* getCookies()
+	* deleteCookies()
+	
+	
+	Options opt = WebDriver.manage();
+	TimeOuts TO = opt.timeouts();
+	TO.implicitlyWait(Duration abc);
+	
+	WebDriver.manage().timeouts().implicitlyWait(Duration);
+	
+	
+	Window Wo = opt.window();
+	Wo.maximize();
+	
+	WebDriver.manage().window().maximize();
+	
+	
+	opt.getCookies();
+	
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+What is WebElement 
+	* It is a interface which follows SearchContext (In Java)
+	* Whatever element you see on a web page is called WebElement (For understanding)
+	
+click();
+submit();
+sendKeys();
+clear();
+getTagName();
+getDomAttribute();
+getAttribute();
+isSelected();
+isDisplayed();
+isEnabled();
+getText();
+findElement();
+findElements();
+getLocation();
+getSize();
+getRect();
+getCssValue();
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Whatever element you see on a web page is called WebElement
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	
+	What is DOM in browser
+The Document Object Model (DOM) is a programming interface for web documents. 
+It represents the page so that programs can change the document structure, style, and content. 
+Essentially, the DOM provides a structured representation of the document (as a tree of objects), 
+and it defines a way that the structure can be accessed from programs 
+so that they can change the document's content, structure, and style.
+	
+	* diff types of tags
+		* html
+		* head
+		* body
+		* header
+		* input
+		* div
+		* ul
+		* li
+		* a 
+		* svg
+		* select (drop down)
+		* frame or iframe (small html)
+		* table
+			* th 
+			* tr
+			* td
+			
+		* <table>
+		<body>
+			<div>
+				<tr>
+					<th>
+					<th>
+					<th>
+				<tr>
+					<td>
+					<td>
+				<tr>
+					<td>
+					<td>
+					
+**************************************************************************************
 
 
 

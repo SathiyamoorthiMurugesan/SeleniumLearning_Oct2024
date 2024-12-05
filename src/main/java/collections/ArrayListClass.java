@@ -73,6 +73,8 @@ public class ArrayListClass {
 //	HashMapPractice
 //	LinkedHashMap
 //	TreeMap
+//	WebDriver
+//	WebElement
 
 	public static void ArrayListPractice() {
 
