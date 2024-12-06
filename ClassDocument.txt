@@ -2283,6 +2283,123 @@ so that they can change the document's content, structure, and style.
 					
 **************************************************************************************
 
+Day 44 (06/12/2024)
+
+* attributes
+	whatever key value pair we see inside any tag is called attributes
+	
+	<div> - start tag
+	
+	</div> - end tag
+	
+	<div key1 = "val1" key2 = "val2" > - start tag
+	"text" 
+	</div>
+	
+	where
+	div - tagName
+	key1, key2 - attributes
+	val1, val2 - attribute's value
+	"text" - tag's display name
+
+How to find element in a page 
+
+<html>
+
+ancestor(div)
+  parent(div)
+	parent(ul)
+		child(li)
+			child(select)
+		child(ul)
+			child(li)
+			child(li)
+	parent(ul)
+	parent(li)
+ancestor(div)
+	parent(div)
+		child(div)
+</html>
+
+ancestor
+parent
+child
+siblings
+following ancestor, parent, child, siblings
+preceding ancestor, parent, child, siblings
+text
+contains(text, 'Sathya')
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+We find elements in a page using locators 
+
+Locators in selenium - 
+	locator value should not be duplicate. must be unique
+		means, id = "sathya" should be present only once
+
+id 
+	* most preferred 
+	* do not use if it has numbers in it. 
+	* id = "abc123"; - DO NOT USE
+		* if we reload again, the id value may change to "abc114"
+name
+className
+	* with more spaces 
+tagName
+linkText
+partialLinkText
+CSS selector
+xpath -XML path
+
+
+id, name, className(class) - when these values are unique we can use them directly. 
+When they are not unique, we use either xpath or CSS
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
+
+
+	By obj1 = By.className("");
+		WebElement ele = driver.findElement(obj1);
+		ele.click();
+		
+		driver.findElement(By.className("")).click();;
+		
+		driver.findElement(By.id("")).sendKeys();
+
+* when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
+* When id, name, className attributes are not present inside an element's tag, then also we use xpath
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+XPath
+
+XPATH - xml path
+
+two types of xpath
+
+Absolutet xpath 
+Relative xpath 
+
+1) absolute xpath - like using steps 
+	* single slash - /
+	* full path need to written - from html
+	* /html/body/nav/div/div/ul[1]/li[1]/span
+
+	* If there is a change in UI, the above order will change and we can not find our desired element 
+		using the above xpath. 
+	* So using this xpath is  NOT RECOMMENDED.
+	
+2) relative xpath - like using lift
+	* double slash - //
+	* No need to write full xpath
+	* need to write the UNIQUE xpath for the given element 
 
 
 
