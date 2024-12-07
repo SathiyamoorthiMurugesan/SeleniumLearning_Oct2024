@@ -2401,7 +2401,29 @@ Relative xpath
 	* No need to write full xpath
 	* need to write the UNIQUE xpath for the given element 
 
+Relative xpath
 
+Syntax
+//tagName[@attributeName = 'value']OR //*[@attributeName = 'value'] OR //tagName[@attributeName = "value"] 
+
+String xpath = "//tagName[@attributeName = \"value\"]"
+
+basic and simple xpath
+and
+or
+you can also use * instead of tagName
+text()
+contains with text(), value
+contains with @attribute, value
+//following::tagName
+//preceding::tagName
+//ancestor::tagName
+//parent::tagName
+//child::tagName
+//following-sibling::tagName
+//preceding-sibling::tagName
+We can use numbers along with xpath 
+by writing single xpath, you can access multiple elements too (eg: drop down values or menu values)
 
 
 
