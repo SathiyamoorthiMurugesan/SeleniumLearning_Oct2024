@@ -2376,7 +2376,9 @@ findElement(By.parialLinkText("Frameworks"));
 * when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
 * When id, name, className attributes are not present inside an element's tag, then also we use xpath
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+**************************************************************************************
+
+Day 45 (07/12/2024)
 
 XPath
 
@@ -2425,7 +2427,147 @@ contains with @attribute, value
 We can use numbers along with xpath 
 by writing single xpath, you can access multiple elements too (eg: drop down values or menu values)
 
+**************************************************************************************
 
+Day 46 (08/12/2024)
+
+
+//tagName[@attribute = 'value']//following::tagName
+
+When element is not found - we get elementNotFoundException
+
+Why element is not found, because we wrongly identified the element
+1) spelling mistake
+2) flow mistake
+3) xpath wrong
+4) timing
+
+StaleElementException
+	* Element is available in DOM but not visible in UI
+		
+https://www.guru99.com/xpath-selenium.html#text
+https://www.guru99.com/locators-in-selenium-ide.html
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+How do you open a web site in your system? 
+
+Chrome browser and ChromeDriver difference.
+
+Compatibility issue. 
+
+To manage compatibility issue, we have 
+WebDriverManager - we will see it later 
+
+Selenium - its a tool to automate web application. 
+
+Selenium is written in many languages 
+	Java
+	Python
+	C#
+	Ruby
+	.Net
+	
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+How to use selenium in Eclipse 
+1. We have add selenium dependency in our project
+ 
+
+Hirarchy 
+* SearchContext Interface (findElement, findElements)
+* WebDriver Interface ( Basic methods for a browser) 
+* RemoteWebDriver Class( all basic methods are implemented here)
+* Classes (ChromiumDriver)ChromeDriver, (GeckoDriver)FirefoxDriver, (ChromiumDrier)MS Edge,  etc.. 
+
+** WebElement interface (Basic action on webElement methods)
+
+
+interface SearchContext {
+
+}
+
+interface WebDriver extends SearchContext {
+
+}
+
+class RemoteWebDriver implements WebDriver {
+
+}
+
+class ChromeDriver extends RemoteWebDriver {
+
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+RemoteWebDriver
+
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\LENOVO\\git\\SaraswathyJavaProject\\drivers\\chromedriver_107.exe");
+ChromeDriver driver = new ChromeDriver();
+
+But we do not need to create object like above.
+Because it will cause a problem when we need to open different browser in single driver instance
+
+To avoid this we keep WebDriver interface as reference for object
+
+WebDriver interface and ChromeDriver/FirefoxDriver/SafariDriver/EdgeDriver are connected through RemoteWebDriver class
+
+All the methods in WebDriver interface are implemented in RemoteWebDriver.
+
+All browser drivers are extended to RemoteWebDriver
+
+WebDriver driver; 
+driver = new ChromeDriver();
+driver = new FirefoxDriver();
+
+{ 
+
+ChromeDriver driver = new ChromeDriver();
+
+code
+
+driver = new EdgeDriver();
+
+EdgeDriver driver1 = new EdgeDriver();
+
+WebDriver driver = new ChromeDriver();
+
+driver = new EdgeDriver();
+driver = new FireDriver();
+
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Who is brower? 
+
+Browsers
+* Chrome
+* Firefox
+* MS edge
+* Opera Mini
+* UC browser
+* HeadlessBrowser
+
+How they used browser in Selenium 
+
+
+
+Diff between Chrome browser and Chrome driver 
+
+	We have to use specific driver for specific version of a browser
+	
+chrome - ChromeDriver - we need to download chromeDriver.exe, while running code, we have to let WebDriver about its path.
+Instead of running chrome.exe from our system, we ask webDriver to run ChromeDriver.exe
+For each browser, we need to take compatible version of its driver.
+for eg: For chrome version 107, we need to download chrome driver version compatible for chrome 107
+Basically we keep the chromeDriver.exe files inside project but we dont push them into git
+
+In order to avoid compatibility issue, we have a concept called WebDriverManager
+
+firefox - geckoDriver
 
 
 
