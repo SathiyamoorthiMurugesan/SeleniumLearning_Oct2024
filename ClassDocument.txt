@@ -2570,6 +2570,27 @@ In order to avoid compatibility issue, we have a concept called WebDriverManager
 firefox - geckoDriver
 
 
+**************************************************************************************
+
+Day 47 (09/12/2024)
+
+Window Handle 
+
+session id - driver 
+window handle - id unique is for each window opened during above session. its never going to be a duplicate value.
+
+By using a driver's, if we open one or more browser window,
+	each window will be assigned with a ID and its called window handle. 
+	
+
+String getWindowHandle();// for a single window
+Set<string> getWindowHandles(); // for multiple windows
+
+switching to a newly opened window when only one new window is opened.
+
+
+
+
 
 
 
