@@ -2571,10 +2571,9 @@ firefox - geckoDriver
 
 
 **************************************************************************************
-
 Day 47 (09/12/2024)
 
-Window Handle 
+Window Handle in Selenium
 
 session id - driver 
 window handle - id unique is for each window opened during above session. its never going to be a duplicate value.
@@ -2582,13 +2581,42 @@ window handle - id unique is for each window opened during above session. its ne
 By using a driver's, if we open one or more browser window,
 	each window will be assigned with a ID and its called window handle. 
 	
+Where is the driver's "focus" would be.
 
 String getWindowHandle();// for a single window
 Set<string> getWindowHandles(); // for multiple windows
 
 switching to a newly opened window when only one new window is opened.
 
+**************************************************************************************
+Day 48 (10/12/2024)
 
+Window handle - Multiple window!
+
+Lets consider 3 window - WinA, WinB, WinC
+
+1. Get window handle of the current window - WinA 
+2. do any actions and open many the windows
+3. user getWindowHandles() method to get all window handles
+4. Remember that, your or your driver's focus is still on WinA, even though you see any other window on your screen.
+5. Use for loop or iterator to iterate between the window handles.
+6. To switch to each window handle (window) user switchTo().window(winHandle) method
+7. Once you switch to a window get its title
+8. if the title you get through iteration, matches your expected title then end the for loop.
+
+
+Case study:
+1. Get window handle of the current window - WinA - parent window
+2. do any actions and open another the window
+3. user getWindowHandles() method to get all window handles
+4. Remember that, your or your driver's focus is still on WinA, even though you see any other window on your screen.
+5. Use for loop or iterator to iterate between the window handles.
+6. if the window handle is not parent window's handle then switch to that window
+7. Now you are in the child window
+8. use driver.close() and close the child window
+9. Now, where my driver's focus will be?
+
+*********************************************************************************************
 
 
 

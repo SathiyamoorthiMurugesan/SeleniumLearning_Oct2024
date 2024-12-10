@@ -9,7 +9,51 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class BasicOfSelenium {
 
+	static WebDriver driver = null;
+
 	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\drivers\\chromedriver_131.exe");
+		driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+
+//		driver.findElement(By.xpath("//button[contains(text(), 'Open Multiple Windows')]")).click();
+		driver.findElement(By.id("newWindowBtn")).click();
+
+		System.out.println(driver.getTitle());
+
+		String parentWindowHandle = driver.getWindowHandle();
+
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+//  ******switch window based on title ********************************
+// *****start*****************
+//		for (String eachWindowHandle : allWindowHandle) {
+//			driver.switchTo().window(eachWindowHandle);
+////			System.out.println(driver.getTitle());
+//			if(driver.getTitle().contains("Basic")) {
+//				break;
+//			}
+//		}
+//		
+//		System.out.println(driver.getTitle());
+//		*****end*****************
+
+		for (String eachWindowHandle : allWindowHandle) {
+			if (!eachWindowHandle.equalsIgnoreCase(parentWindowHandle)) {
+				driver.switchTo().window(eachWindowHandle);
+			}
+		}
+		driver.close();
+		driver.switchTo().window(parentWindowHandle);
+		System.out.println(driver.getTitle());
+
+	}
+
+	public static void test() {
 
 		System.out.println(System.getProperty("user.dir"));
 
@@ -50,7 +94,7 @@ public class BasicOfSelenium {
 
 //		Even though new window is opened, our driver is still focus on the parent window
 //		To confirm that, we are printing the window handle again
-		System.out.println("This is parent window handle: "+driver.getWindowHandle());
+		System.out.println("This is parent window handle: " + driver.getWindowHandle());
 
 //		getting all window handles opened during this session
 		Set<String> allWindowHandles = driver.getWindowHandles();
@@ -66,9 +110,9 @@ public class BasicOfSelenium {
 			}
 //			System.out.println(eachWindow);
 		}
-		
-		System.out.println("My current window Handle id is: "+driver.getWindowHandle());
-		
+
+		System.out.println("My current window Handle id is: " + driver.getWindowHandle());
+
 //		driver.close();
 		driver.quit();
 //		
@@ -95,6 +139,47 @@ public class BasicOfSelenium {
 			driver = new ChromeDriver();
 		}
 
+	}
+
+	public void switchToAWindowBasedOnTitle(String windowTitle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		for (String eachWindowHandle : allWindowHandle) {
+			driver.switchTo().window(eachWindowHandle);
+//			System.out.println(driver.getTitle());
+			if (driver.getTitle().contains(windowTitle)) {
+				break;
+			}
+		}
+	}
+
+	public void closeAllChildWindows(String parentWindowHandle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		for (String eachWindowHandle : allWindowHandle) {
+			if (!eachWindowHandle.equals(parentWindowHandle)) {
+				driver.switchTo().window(eachWindowHandle);
+				driver.close();
+			}
+		}
+		driver.switchTo().window(parentWindowHandle);
+	}
+
+	public void closeAllTheWindowsExceptGivenWindow(String windowTitle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		String bWindowHandle = null;
+		
+		for (String eachWindowHandle : allWindowHandle) {
+			driver.switchTo().window(eachWindowHandle);
+//			System.out.println(driver.getTitle());
+			if (driver.getTitle().contains(windowTitle)) {
+				bWindowHandle = driver.getWindowHandle();
+				continue;
+			} else
+				driver.close();
+		}
+		driver.switchTo().window(bWindowHandle);
 	}
 
 }
