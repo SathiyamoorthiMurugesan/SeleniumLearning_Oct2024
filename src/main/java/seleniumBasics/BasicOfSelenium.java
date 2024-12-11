@@ -1,5 +1,11 @@
 package seleniumBasics;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -11,7 +17,37 @@ public class BasicOfSelenium {
 
 	static WebDriver driver = null;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		BasicOfSelenium obj = new BasicOfSelenium();
+
+//		driver = obj.launchABrowser("Chrome");
+//		obj.maximizeTheWindow();
+//		obj.openAnApplication("https://www.hyrtutorials.com/p/window-handles-practice.html");
+//		obj.implicitWait();
+
+		obj.launchABrowser();
+		obj.maximizeTheWindow();
+		obj.openAnApplication();
+		obj.implicitWait(8);
+		obj.getTitle();
+
+	}
+
+	public void implicitWaitBasic() {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\drivers\\chromedriver_131.exe");
+		driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+	}
+
+	public void windowHandleBasic() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\LENOVO\\git\\JavaSel_Oct2024\\drivers\\chromedriver_131.exe");
 		driver = new ChromeDriver();
@@ -119,7 +155,7 @@ public class BasicOfSelenium {
 
 	}
 
-	public void launchABrowser(String browserName) {
+	public WebDriver launchABrowser(String browserName) {
 
 		WebDriver driver;
 
@@ -138,6 +174,8 @@ public class BasicOfSelenium {
 			System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver_131.exe");
 			driver = new ChromeDriver();
 		}
+
+		return driver;
 
 	}
 
@@ -165,11 +203,15 @@ public class BasicOfSelenium {
 		driver.switchTo().window(parentWindowHandle);
 	}
 
+	public void switchToParentWindow(String parentWindowHandle) {
+		driver.switchTo().window(parentWindowHandle);
+	}
+
 	public void closeAllTheWindowsExceptGivenWindow(String windowTitle) {
 		Set<String> allWindowHandle = driver.getWindowHandles();
 
 		String bWindowHandle = null;
-		
+
 		for (String eachWindowHandle : allWindowHandle) {
 			driver.switchTo().window(eachWindowHandle);
 //			System.out.println(driver.getTitle());
@@ -182,4 +224,110 @@ public class BasicOfSelenium {
 		driver.switchTo().window(bWindowHandle);
 	}
 
+	public void maximizeTheWindow() {
+		driver.manage().window().maximize();
+	}
+
+	public void minimizeTheWindow() {
+		driver.manage().window().minimize();
+	}
+
+	public void fullScreenTheWindow() {
+		driver.manage().window().fullscreen();
+	}
+
+	public void openAnApplication(String ApplicationUrl) {
+		driver.get(ApplicationUrl);
+	}
+
+	public void openAnApplication() throws Exception {
+//		String url = readAProperty("url");
+//		driver.get(url);
+
+		driver.get(readAProperty("url"));
+	}
+
+	public void implicitWait(long secondsToWait) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(secondsToWait));
+	}
+
+//	public void implicitWait() throws FileNotFoundException, IOException {
+	public void implicitWait() throws Exception {
+		Properties prop = new Properties();
+
+		File file = new File(".\\ProjectProperty.properties");
+		FileInputStream fis = new FileInputStream(file);
+//		FileInputStream fis = new FileInputStream(new File(".\\ProjectProperty.properties"));
+
+		prop.load(fis);
+
+		String secondsToWait = prop.getProperty("implicitWait");
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(secondsToWait)));
+	}
+
+	public void launchABrowser() throws Exception {
+
+//		Properties prop = new Properties();
+//
+//		File file = new File(".\\ProjectProperty.properties");
+//		FileInputStream fis = new FileInputStream(file);
+//		prop.load(fis);
+//
+//		String browserName = prop.getProperty("browser");
+
+		String browserName = readAProperty("browser");
+
+		switch (browserName) {
+		case "Chrome":
+			System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver_131.exe");
+			driver = new ChromeDriver();
+			break;
+
+		case "Edge":
+			System.setProperty("webdriver.edge.driver", ".\\drivers\\msedgedriver_131.exe");
+			driver = new EdgeDriver();
+			break;
+
+		default:
+			System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver_131.exe");
+			driver = new ChromeDriver();
+		}
+
+	}
+
+	public String readAProperty(String propertyName) throws Exception {
+		Properties prop = new Properties();
+
+		File file = new File(".\\ProjectProperty.properties");
+		FileInputStream fis = new FileInputStream(file);
+		prop.load(fis);
+
+		return prop.getProperty(propertyName);
+	}
+
+	public String readAProperty(String propertyFileName, String propertyName) throws Exception {
+		Properties prop = new Properties();
+
+		File file = new File(propertyFileName);
+		FileInputStream fis = new FileInputStream(file);
+		prop.load(fis);
+
+		return prop.getProperty(propertyName);
+	}
+
+	public String getTitle() {
+		System.out.println(driver.getTitle());
+		return driver.getTitle();
+	}
+
+	public String getCurrentUrl() {
+		System.out.println(driver.getCurrentUrl());
+		return driver.getCurrentUrl();
+	}
+
+	public String getCurrentWindowHandle() {
+		return driver.getWindowHandle();
+	}
+	
 }

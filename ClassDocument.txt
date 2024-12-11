@@ -2618,6 +2618,31 @@ Case study:
 
 *********************************************************************************************
 
+Day 49 (11/12/2024)
+
+Wait in selenium - Implicit wait
+
+Code run and application load - synchronization
+Implicit wait applies for each page 
+We use this wait only one time in our program and it will be applied to all the pages.
+
+* How to read property file and using it in our code
+* Null pointer exception while using Driver, to rectify it 
+	* return driver and assign to class level variable (driver)
+	* assign driver to class level variable 
+	
+* How to create generic methods 
+
+* practice how to read a class 
+	Duration
+	FileInputStream
+	Time
+	WorkBook
+	HSSFSheet
+	XSSFSheet
+	Fillo
+	
+
 
 
 
