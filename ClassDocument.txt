@@ -2642,7 +2642,31 @@ We use this wait only one time in our program and it will be applied to all the 
 	XSSFSheet
 	Fillo
 	
+*********************************************************************************************
 
+Day 50 (12/12/2024)
+
+WebElement findElement(By by)
+List<WebElement> findElements(By by)
+
+Locators 
+
+Id
+Name
+ClassName
+TagName
+LinkText
+PartialLinkText
+CSS
+Xpath
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
 
 
 
