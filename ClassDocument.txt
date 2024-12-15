@@ -2693,7 +2693,52 @@ Day 51 (14/12/2024)
 findElments and findElment in detail
 
 
+*********************************************************************************************
 
+Day 52 (15/12/2024)
+
+Alert in Selenium
+
+What is alert 
+	* Alerts does not let you to proceed with original application unless its been handled.
+	* its a pop up ( web based pop up and OS based pop up)
+
+How do you identify whether its a alert or any other normal web page
+	* Alert does not let you to proceed with original application
+	* Alert does not have any url
+	* you can not inspect an alert 
+
+Types:
+	* Simple/Informational alert - OK(Accept) button along with some text
+	* Prompt alert - Yes(accept) or no(dismiss) alert 
+	* Confirmational Alert - You need to enter a text to proceed further 
+
+Alert methods 
+	public interface Alert {
+  		void dismiss();
+ 		void accept();
+  		String getText();
+  		void sendKeys(String keysToSend);
+}
+
+How to handle an alert:
+	* in web page we click a link or button, then it will throw an alert.
+	* Web page's focus will be removed 
+	* We need to manually switch the focus of the webdriver to the alert
+Where the alert is present:
+	WebDriver -> TargetLocator switchTo() - Alert alert();
+How do we switch focus to alert 
+	1) Alert alt = driver.switchTo().alert();
+		alt.dismiss(); or alt.accept();
+	2) driver.swithcTo().alert().accept();
+
+Problem we face while working with Alert:- 
+	1) We are expecting an alert after clicking an element
+		also we write a code to manage the alert
+		But sometimes, the alert wont pop up. - Exception:- NoSuchAlertException/NoAlertPresentException
+	2) We are not expecting any alert
+		But alert pops up - Exception: UnhandledAlertException 
+		
 
 
 

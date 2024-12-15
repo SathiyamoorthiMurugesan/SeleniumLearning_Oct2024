@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class GenericMethods2 {
+public class A1_GenericMethods2 {
 	
 	WebDriver driver;
 

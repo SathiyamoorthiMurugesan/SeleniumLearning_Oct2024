@@ -13,12 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class BasicOfSelenium {
+public class A1_BasicOfSelenium {
 
 	static WebDriver driver = null;
 
 	public static void main(String[] args) throws Exception {
-		BasicOfSelenium obj = new BasicOfSelenium();
+		A1_BasicOfSelenium obj = new A1_BasicOfSelenium();
 
 //		driver = obj.launchABrowser("Chrome");
 //		obj.maximizeTheWindow();
