@@ -2671,5 +2671,30 @@ findElement(By.parialLinkText("Frameworks"));
 
 
 
+WebDriver 
+WebElement methods
+WindowHandle
+
+
+alert
+select - drop down 
+frame or iframe
+Webtables 
+Actions
+Robot
+Wait
+SCrolling
+Screenshots
+
+*********************************************************************************************
+
+Day 51 (14/12/2024)
+
+findElments and findElment in detail
+
+
+
+
+
 
 
