@@ -2711,7 +2711,7 @@ How do you identify whether its a alert or any other normal web page
 Types:
 	* Simple/Informational alert - OK(Accept) button along with some text
 	* Prompt alert - Yes(accept) or no(dismiss) alert 
-	* Confirmational Alert - You need to enter a text to proceed further 
+	* Confirmation Alert - You need to enter a text to proceed further 
 
 Alert methods 
 	public interface Alert {
@@ -2739,6 +2739,42 @@ Problem we face while working with Alert:-
 	2) We are not expecting any alert
 		But alert pops up - Exception: UnhandledAlertException 
 		
+
+********************************************************************
+
+Day 53 (16/12/2024)
+
+Drop down handling using Selenium
+
+There are two types 
+	* Single selection
+	* Multi selection
+	
+* How Dropdown are configured in a web page
+	* By using select tag and options tag
+		* index
+		* value - attribute
+		* display text - attribute
+		
+	Selenium has a separate class to handle select tag drop down
+		* Select class
+		* first locate the select  tag - and store it in to Webelement
+		* Select select = new Select(WebElement); 
+		
+Important methods 
+	1) selectByIndex(int)
+	2) selectByVisibleText(String)
+	3) selectByValue(String)
+	4) getOptions()
+	5) deselectAll() - works only on multiple select 
+	6) isMultiple()
+	7) selectByContainsVisibleText(String)
+	
+******** You can also access the drop down with out using Select class***********
+
+In that time you need to use - findElements() method
+
+************************************************************************************
 
 
 
