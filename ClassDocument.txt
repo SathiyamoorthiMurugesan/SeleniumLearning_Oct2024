@@ -2828,14 +2828,19 @@ Exception we encounter while working with frames or iframes
 	* NoSuchElementException
 	* NoSuchFrameException
 	
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+********************************************************************************
 
+Day 55 (18/12/2024)
 
 Actions class in detail
+
+This is a utility class which has automated methods for mouse and keyboard actions 
+
 
 Robot class in detail
 
 
+********************************************************************************
 
 
 
