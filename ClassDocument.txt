@@ -2842,5 +2842,60 @@ Robot class in detail
 
 ********************************************************************************
 
+Day 56 (19/12/2024)
+
+Wait in Selenium
+
+Why do we need wait in Selenium? 
+
+Synchronization between website and selenium is needed to execute the test cases smoothly. 
+
+We cant control the web site, instead of that, we can control the selenium code. 
+
+For that we use wait
+
+There are two types 
+
+1. Implicit wait - Written only one time and it is applicable for each page.  
+2. Explicit wait - with in a page, due to any action a new element shows or hided from web site,
+						that time, we need explicit wait.
+						
+There is some other wait called 
+	Thread.sleep(long millis);
+
+* its a wait from Java. its not belongs to Selenium
+* Thread.sleep(2000); 
+	* if element is not displayed in GUI, after the 2 seconds we get exception
+	* if the element shows up witin 2 seconds, the balance time is a waste
+	
+This is the reason we are not using Thread.sleep() method.
+
+******* Explicit Wait ***********************
+
+NoSuchElementException 
+	* When there is a sync issue 
+
+ElementNotFoundException
+	* When we incorrectly locate an element
+	
+refer: 
+https://naveenautomationlabs.com/nosuchelementexception-and-notfoundexception-in-selenium-common-exceptions-in-selenium/
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Shadow root elements
+
+	* If an element is present inside the shadow root, we can not locate it in DOM using xpath or CSS.
+		It always shows 0 of 0.
+	* To access an element which is present inside the shadow dom or show root. You need to find thet host of the shadow root
+		* Then use the method getShadowRoot();
+	* Keep in mind that, xpath wond work inside the shadow root. 
+		* You need to use the CSS Selector
+
+
+
+
+
+
 
 
