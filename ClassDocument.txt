@@ -2891,6 +2891,41 @@ Shadow root elements
 		* Then use the method getShadowRoot();
 	* Keep in mind that, xpath wond work inside the shadow root. 
 		* You need to use the CSS Selector
+		
+
+
+********************************************************************************
+
+Day 57 (20/12/2024)
+
+Casting in Java
+		* Coverting one data type to another is called casting or typecasting. 
+		
+	double i = 100.245; 
+ 
+ //We need the value of "i" in the type of short or int.
+      short j = (short)i; 
+        int k = (int)i; 
+
+Scrolling in Selenium
+	* We can not automate scrolling using the selenium
+	* sometimes you want to bring an element into the view of your screen to perform operation
+		
+There are different ways to scroll your application when you work using selenium
+	* JavaScriptExecutor (need typecasting)
+	* Key board or mouse (Actions or Robot class)
+	* Actions class - moveToElement() methods is often used
+	
+Along with Scrolling, we can also do click and send text to any element using JSE(JavaScriptExecutor).
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Screenshot in Selenium
+
+
+
+ 
+
 
 
 
