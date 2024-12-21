@@ -2923,7 +2923,53 @@ Along with Scrolling, we can also do click and send text to any element using JS
 Screenshot in Selenium
 
 
+********************************************************************************
 
+Day 58 (21/12/2024)
+
+Web table in detail 
+
+How do we work on frame, select, shadow root element 
+
+1) We identity the frame tag (parent tag) and then access the elements present in that tag.
+2) We identity the select tag(parent tag) and then accecss the options 
+3) We identity the tag (shadow host/parent tag) which contains the shadow root and then we access the element inside the tag.
+
+Like wise,
+	We need to identify the tag named <table> and then access the element inside it
+	<tr> - table row 
+	<th> - table header
+	<td> - table data
+	
+	<table>
+		<tr>  - 
+			<th>
+			<th>
+		<tr>
+			<td>
+			<td>
+		<tr>
+			<td>
+			<td>
+			
+Questions can be asked in related to web table.
+	1) Get/print all table header
+	2) print all row values
+	3) Print request column's values  
+	4) Based on request, fetch/delete/edit/modify the respective row values
+	5) Based on one column value, find the respective another column's value
+	6) How many rows are in the table including/excluding header row
+	
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+WebDriver manager
+
+To avoid browser compatibility issue and manual download of the respective driver
+
+********************************************************************************
+	
+	
  
 
 
