@@ -2968,9 +2968,157 @@ WebDriver manager
 To avoid browser compatibility issue and manual download of the respective driver
 
 ********************************************************************************
+Day 59 (22/12/2024)
+
+validation in Selenium using TestNG
+
+TestNG is a testing framework inspired from JUnit and NUnit 
+but introducing some new functionalities that make it more powerful and easier to use. 
+It supports test configured by annotations, data-driven testing, parametric tests, etc.
+
+* To use TestNG methods in your project, you need to add its "dependencies"
+* To use TestNG with your eclipse, you need to add its "plug-in" from Eclipse market place
+
+TestNG
+* Its a multipurpose tool and also works as a framework
+* We can use TestNG as a tool when we use Test Driven or Behaviour Driven frameworks
+* TestNG gives you some annotations and tags, so that you can run your test cases easily 
+* To work with TestNG in Eclipse, you need to install TestNG Eclipse plugin via market place 
+* In order to use TestNG annotations and tags in your project, you need to add TestNG dependencies 
+
+Official Documentation page: https://testng.org/doc/documentation-main.html
+
+Main annotation of TestNG is @Test 
+	* If we run a class using TestNG, then whatever methods represented as @Test will run
+	* There are two way to run a class file using TestNG
+		1) Simply right click on the class and Run as TestNG 
+		2) Right click on the class from project path, Covert the class into TestNG. It will create a xml file. 
+			By using the file we can run the class (recommended way)
+Whenever we run as TestNG, 
+	1) we get a basic report under test-output --> index.html
+	2) we also get the recently failed test case details --> emailable-report.html
+	3) For recently failed test cases, we get xml in testng-failed.xml
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Agile
+
+
+
+Two kind of methodology
+1. Agile
+2. Water fall.
+
+Difference between waterfall and agile 
+
+Agile methodology
+
+key words 
+
+Scrum time period or Agile time period  (Iteration)
+	- one or two week or 15 days (Mostly its starts on Wednesday and ends with Tuesday)
+	
+an epic serves to manage tasks. It's a defined body of work that is segmented into specific tasks 
+(called �stories,� or �user stories�) based on the needs/requests of customers or end-users
+
+
+PI meeting - 
+	High level team works on who will work on which changes and those changes will be split into small parts so that, 
+	we can do that small work in one sprint time
+	Duration: 4 hours to half a day 
+	Attendee: Product Owner and Scrum master
+	
+Sprint Planning
+	Task(User Stories) for small work is created, explained, assigned to a person, complexity will be decided
+	Here complexity is called story point
+	Basically story point is fibanocci series 1, 2, 3, 5, 8, 13.
+	
+	Inform your leave plan
+	 
+Daily Stand-Up
+	What you did yesterday
+	what are you going to do today 
+	what is your plan for tomorrow
+	Any risk on completing work
+	
+	leave details for unplanned or planned leave
+	
+Sprint Review/Demo
+	Give prove it or demo on whatever stories you did on that sprint
+
+Sprint Retrospective
+	What went well and appreciations
+	What need improvement
 	
 	
- 
+When there is a risk in completing a story
+	E.g: Developer gives story to testing when there is only 3 days left. But in order to complete the testing you need 7 days
+In this case
+	1. No other choice you need to complete the testing in 3 days itself.
+	2. Complete as much as possible, then create a new QA(Testing) story in next sprint
+	3. Move the entire story from this sprint to next sprint
+	4. Let your scrum master to ask for extension of the current sprint
+
+*********************
+
+Scrum
+
+Teams in Scrum
+
+Company - Wipro
+client/Account - Alight
+	* One Account can have multiple projects
+Domain - Health & Welfare
+Project - Bank of America
+Project contains many teams and they are called scrum teams (POD)  
+
+Consider client as your project team *****
+Each POD is a scrum or agile team
+
+Scrum Team 
+	* Scrum Master - POD lead
+	* Product Owner - BIM/BOM
+	* New hire team config team
+	* New hire testing team
+	
+Scrum team
+	Product Owner(PO) - BIM or BOM
+	Scrum master - Like lead but does only managerial work
+	Devs(Onshore and offshore) - 
+	Testers(Onshore and offshore)
+	Business Tester if there is any
+	
+	In my team totally 12 members
+	1. PO (client person)
+	2. SM (from client or from our company)
+	3. 2 dev in onsite (from client or from our company)
+	4. 3 dev in offshore (from client or from our company)
+	5. 3 Tester in offshore (You and other two) 
+	6. 1 Tester in onshore (Testing lead)
+	7. Business Tester or BA 
+	
+Company - Capgemini
+Client - Fidelity 
+Outsourcing their project to Capgemini
+Chennai have fidelity office too. 
+Project - Fidelity invesment
+Our project have both Client team persons as well as Capgemini team persons
+
+************************************************
+
+Day to day life at work 
+
+When do you automte 
+
+How many test cases do you write on a day
+	* where are we with the framework 
+	* complexity of the test cases
+	
+Tell me about yourself
+Explain your project 
+day to day at office
+Tell about your team
 
 
 
