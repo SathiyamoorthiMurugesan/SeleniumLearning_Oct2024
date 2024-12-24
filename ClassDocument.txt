@@ -2986,7 +2986,7 @@ TestNG
 * To work with TestNG in Eclipse, you need to install TestNG Eclipse plugin via market place 
 * In order to use TestNG annotations and tags in your project, you need to add TestNG dependencies 
 
-Official Documentation page: https://testng.org/doc/documentation-main.html
+Official Documentation page: https://testng.org/#_testng_documentation
 
 Main annotation of TestNG is @Test 
 	* If we run a class using TestNG, then whatever methods represented as @Test will run
@@ -3119,6 +3119,82 @@ Tell me about yourself
 Explain your project 
 day to day at office
 Tell about your team
+
+*****************************************************************
+Day 60 (24/12/2024)
+
+TestNG provides a default report(index.html) and emailableReport.html.
+@Test - estential to run your test case 
+Alphabetical order 
+To control the order of @Test's, you need to use priority
+TestNG xml - how to generate it and how to run from xml
+	* Right click the desired class
+	* TestNG -> Convert to TestNG
+	* xml will be generated
+Annotations
+	A TestNG test can be configured by @BeforeXXX and @AfterXXX annotations 
+	which allows to perform some Java logic before and after a certain point, 
+	these points being either of the items listed above.
+	
+Suite
+Test
+Class
+Method
+Easy way to remember - State CM (ST CM)	
+
+@BeforeSuite
+@AfterSuite
+@BeforeTest
+@AfterTest
+@BeforeGroups
+@AfterGroups
+@BeforeClass
+@AfterClass
+@BeforeMethod
+@AfterMethod
+@Test
+
+Annotation Attributes
+	Priority
+	Enabled
+	AlwaysRun
+	Group
+	DependsOnGroup
+
+	
+
+
+TestNG Annotations
+
+STATE CM - ST CM
+
+Order of annotation
+
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
+priority = 1
+enabled = true/false
+always run = true/false
+invocation count = 3
+testng xml creation
+	include and exclide methods
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Parameters
+DataProviders
+DependsOnMethods
+Groups
+DependsOnGroups
+
 
 
 
