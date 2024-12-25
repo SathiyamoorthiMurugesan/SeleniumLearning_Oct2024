@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testNG.Annotations"/>
+      <class name="testNG.AnnotationsOrderOfExecution"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

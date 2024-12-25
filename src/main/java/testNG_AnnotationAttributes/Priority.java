@@ -16,7 +16,8 @@ public class Priority {
 		System.out.println("Hiiii");
 	}
 	
-	@Test (priority = 1)
+	@Test 
+//	(priority = 1)
 	public void AA() {
 		System.out.println("AAA");
 	}

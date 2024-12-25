@@ -3109,7 +3109,7 @@ Our project have both Client team persons as well as Capgemini team persons
 
 Day to day life at work 
 
-When do you automte 
+When do you automate 
 
 How many test cases do you write on a day
 	* where are we with the framework 
