@@ -3157,50 +3157,35 @@ Easy way to remember - State CM (ST CM)
 Annotation Attributes
 	Priority
 	Enabled
-	AlwaysRun
+	AlwaysRun - mostly used with grouping
 	Group
 	DependsOnGroup
 
+******************************************************************************************
+
+Day 61 (26/12/2024)
+
+You should know, 
+	* different ways to run a TestNG class
+		* open class, righ click and run as TestNG
+		* Right click and run as TestNG
+		* Create a xml for that, and open the xml and run
+		* Create a xml and right click on the xml and run  
+	* Default report (always have the latest run's report or always it would be overridden)
+		* index.html
+		* emailable report.
+		* failed test case xml
+	* Default suit and default test - you can change the name if you want
+	
+	
+Annotation Attributes - continuation
+	Depends on Method
+	Invocation count
+	
+Annotation
+	* @Parameters
+	* @DataProvider
 	
 
-
-TestNG Annotations
-
-STATE CM - ST CM
-
-Order of annotation
-
-@BeforeSuite
-@BeforeTest
-@BeforeClass
-@BeforeMethod
-@Test
-@AfterMethod
-@AfterClass
-@AfterTest
-@AfterSuite
-
-priority = 1
-enabled = true/false
-always run = true/false
-invocation count = 3
-testng xml creation
-	include and exclide methods
-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-Parameters
-DataProviders
-DependsOnMethods
-Groups
-DependsOnGroups
-
-
-
-
-
-
-
-
-
+	
 
