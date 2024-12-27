@@ -3187,5 +3187,72 @@ Annotation
 	* @DataProvider
 	
 
+*******************************************************************************
+
+Day 62 (27/12/2024)
+
+Framework in Selenium
+
+Difference between Automation and Framework?
+* Doing a work without manual effort is called - Automation
+	* In Automation - duplicate codes, redundency of codes will be there
+	* Explaining the flow is difficult 
+	* We can not use it for some other web application
+	* To automate each test case, it would take more time because we dont have common or generic methods to reuse.
+* Doing a same work by using a properly arranged structure of code.
+	E.g: keep a separate class to read or write on excel, prop or config or text files
 	
+Page Object Model design pattern... 
+	* each page - each java class (login page, cart page, payment page)
+	* each class - find all the elements inside of it and store it in a variable with proper name. (Page Objects)
+	* each class - find all the possible test cases and covert them into methods (Page Objects)
+	* how do you differentiate pages in an application - if URL changes, its a new page
+	
+https://practice.expandtesting.com/
+https://magento.softwaretestingboard.com/
+
+Test Driven
+	* Data driven Framework
+	* Keyword driven Framework
+	* Hybrid framework
+	
+Tools - JUnit, TestNG
+
+Behaviour Driven Framework
+	* Cucumber along with JUnit/TestNG
+	
+When should we Automate
+	* Web Application should be stable
+	* Manual Test cases available - Manual understanding needed
+	* In Manual Test cases 
+		* What can be automated
+		* What can not be automated
+		* partially automated 
+		* Manual intervention test cases
+	* What are the regression Test cases, in that...
+	* Define Complexity of Test cases 
+		* Low 
+		* Medium
+		* High
+	* How much time it would take to complete the entire automation
+		
+Once we figure out the test cases
+
+1) What technology we are going to use - Java, Python, Selenium, Playwrite, QTP
+2) IDE - Eclipse, Visual Studio Code, InteliJ, STS(Spring tool suite)
+3) Framework - Data driven, Keyword, Hybrid (TestNG), Behaviour Driver (Cucumber + TestNG)
+4) How do store data - Excel, Json, CSV
+5) What are the standards we are going to follow
+	* method naming
+	* webElement naming
+	
+	
+Orange HRM page
+
+Admin - Saro
+PIM - Hari
+Leave - Usha
+Time - Partha
+Recruitment - Nirmal
+My Info - Sudha
 
