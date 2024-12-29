@@ -3256,3 +3256,39 @@ Time - Partha
 Recruitment - Nirmal
 My Info - Sudha
 
+Orange HRM page - xpath 
+
+How to freeze a web page
+	* open DOM
+	* press Ctrl + Shift + P
+	* Search "Emulate a focused page" and click
+	* Now you can inspect the disappearing element easily. 
+	
+
+
+//label[text() = 'Employment Status']//following::div[@role='listbox']//span
+//label[text() = 'Include']//following::div[@role='listbox']//span
+//label[text() = 'Show Leave with Status']//following::div[@class='oxd-multiselect-wrapper']//i[contains(@class, 'arrow')]
+//label[text() = 'Show Leave with Status']//ancestor::div[contains(@class, 'oxd-input-group')]//i[contains(@class, 'arrow')]
+
+//label[text() = 'Leave Type']//ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//i
+//label[text() = 'Leave Type']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//i
+//label[text() = 'Leave Type']//ancestor::div[contains(@class, 'oxd-input-group')]//i[contains(@class, 'arrow')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
