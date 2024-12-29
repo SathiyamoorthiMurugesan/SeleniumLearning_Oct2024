@@ -3246,6 +3246,9 @@ Once we figure out the test cases
 	* method naming
 	* webElement naming
 	
+*************************************************************************
+
+Day 63 (28/12/2024)
 	
 Orange HRM page
 
@@ -3274,6 +3277,36 @@ How to freeze a web page
 //label[text() = 'Leave Type']//ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//i
 //label[text() = 'Leave Type']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//i
 //label[text() = 'Leave Type']//ancestor::div[contains(@class, 'oxd-input-group')]//i[contains(@class, 'arrow')]
+
+******************************************************************************************
+
+Day 64 (29/12/2024)
+
+Creating a new framework with TestNG
+
+1) Maven project
+2) Add required Dependencies - TestNG, Selenium
+	(also add the TestNG library to the project)
+3) Add the drivers
+3) Packages creation
+		src/main/java
+			* Base package
+				* Generic Class (We keep all the common methods related to Selenium)
+				* Utility Class (File(Excel, prop, text) reading methods
+			* Pages package
+				* One class for each page
+		src/main/resources
+			* Files which will be used with src/main/java package classes
+		src/test/java
+			* TestCases package
+				* New hire TCs class, etc
+		src/test/resources
+			* Files which will be used with src/test/java package classes
+
+https://github.com/SathiyamoorthiMurugesan/Oct24TestNGFramework/tree/master
+				
+			
+		
 
 
 
