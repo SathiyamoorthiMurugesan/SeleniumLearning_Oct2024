@@ -3292,7 +3292,7 @@ Creating a new framework with TestNG
 		src/main/java
 			* Base package
 				* Generic Class (We keep all the common methods related to Selenium)
-				* Utility Class (File(Excel, prop, text) reading methods
+				* Utility Class (File, Excel, prop, text) reading methods
 			* Pages package
 				* One class for each page
 		src/main/resources
@@ -3303,10 +3303,179 @@ Creating a new framework with TestNG
 		src/test/resources
 			* Files which will be used with src/test/java package classes
 
+TestNG Framework!!
 https://github.com/SathiyamoorthiMurugesan/Oct24TestNGFramework/tree/master
 				
-			
+******************************************************************************************
+
+Day 65 (30/12/2024)		
 		
+Framework development
+
+Framework in Selenium
+
+Difference between Automation and Framework?
+* Doing a work without manual effort is called - Automation
+	* In Automation - duplicate codes, redundency of codes will be there
+	* Explaining the flow is difficult 
+	* We can not use it for some other web application
+	* To automate each test case, it would take more time because we dont have common or generic methods to reuse.
+* Doing a same work by using a properly arranged structure of code.
+	E.g: keep a separate class to read or write on excel, prop or config or text files
+	
+Page Object Model design pattern... 
+	* each page - each java class (login page, cart page, payment page)
+	* each class - find all the elements inside of it and store it in a variable with proper name. (Page Objects)
+	* each class - find all the possible test cases and covert them into methods (Page Objects)
+	* how do you differentiate pages in an application - if URL changes, its a new page
+	
+https://practice.expandtesting.com/
+https://magento.softwaretestingboard.com/
+
+Test Driven
+	* Data driven Framework
+	* Keyword driven Framework
+	* Hybrid framework
+	
+Tools - JUnit, TestNG
+
+Behaviour Driven Framework
+	* Cucumber along with JUnit/TestNG
+	
+When should we Automate
+	* Web Application should be stable
+	* Manual Test cases available - Manual understanding needed
+	* In Manual Test cases 
+		* What can be automated
+		* What can not be automated
+		* partially automated 
+		* Manual intervention test cases
+	* What are the regression Test cases, in that...
+	* Define Complexity of Test cases 
+		* Low 
+		* Medium
+		* High
+	* How much time it would take to complete the entire automation
+		
+Once we figure out the test cases
+
+1) What technology we are going to use - Java, Python, Selenium, Playwrite, QTP
+2) IDE - Eclipse, Visual Studio Code, InteliJ, STS(Spring tool suite)
+3) Framework - Data driven, Keyword, Hybrid (TestNG), Behaviour Driver (Cucumber + TestNG)
+4) How do store data - Excel, Json, CSV
+5) What are the standards we are going to follow
+	* method naming
+	* webElement naming
+
+
+******************************************************************************************
+
+Day 66 (2/1/2025)
+
+Extent report
+
+****************************************************************************************
+
+Day 67 (3/1/2025)
+
+Framework is like a house
+
+Behavior/Behaviour driven framework using Cucumber and Junit/TestNG (BDD Framework)
+
+When do we go for behaviour driven framework? 
+
+* Need to install cucumber plug in for Eclipse
+* Need to add dependencies in your project 
+	* Cucumber-Java
+	* Cucumber-jvm
+	* Cucumber-junit
+	* Cucumber-core
+* Make sure that, all the above 4 dependencies need to have same version.
+* Right click on your project--> Configure ---> Convert to cucumber project 
+* We can run Cucumber with Junit as well as TestNG tool. Most preferable is Junit 
+
+Other dependencies
+	* Cucumber extent report
+	* Cucumber 7 Extent report adapter
+
+* When we go for it? When our team has manual testers, Business Analyst
+* When we create a framework, we have below files
+	* Base/Generic class - where we initiate our driver, common methods 
+	* Utilities class - where we have commonly used methods. Excel or prop file or DB reading
+	* POM structure - separate class for each page (Page Object and Page factory)
+	* Test case class 
+	
+* What are the 3 important files
+	* Features folder (create inside test/resources folder.. 
+			eg. LoginPage.feature(file) ) - This is where we keep our test cases in simple English format(Gherkin language)
+	* Step definition (Java file)
+		* Java and selenium codes present in each pages class. 
+		* Test cases present in feature files
+		* Step definition files works as a link between coding and test cases
+	* Runner (java file)
+		* This is where our testing starts
+		* feature file - path of specific file or features files folder
+		* tag - test case tag name
+		* Step def path - path of the specific step def or entire package name 
+* Gherkin language
+	* Given 
+	* When 
+	* Then
+	* And
+	* But
+
+* Feature file
+	* Feature 
+	* Scenario (Test case)
+	* How to pass parameters
+	* Scenario Outline
+	* Examples
+	* Background
+
+* Step definision
+	* How to create it easily
+	
+* Runner file
+	* This is where execution starts
+	
+Cucumber Structure
+
+ProjectName
+	src/main/java
+	src/main/resources
+	src/test/java
+		Base package
+			Base class - where we initiate web driver
+		Utilities package
+			Property reader class
+			Excel reader class
+			CSV file reader class
+		Pages package (POM with Page objects and Page factory)
+			Each pages class
+		Step definition package
+			Step definition files
+		Runner package
+			Runner files
+	src/test/resources
+		Features (folder)
+			* Each feature files
+			* property file
+			* excel sheet 
+			* Text files 
+	drivers folder
+		* Where we keep all the browser exe files
+	target folder
+		* This is where compile codes where present (.class file)
+	test-output 
+		* Reports
+		* screenshots
+	pom.xml
+		* This is where we keep our dependencies for maven projects
+	
+Cucumber extent report 
+
+
+
 
 
 
