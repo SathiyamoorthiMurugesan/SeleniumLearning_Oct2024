@@ -3376,7 +3376,7 @@ Extent report
 
 ****************************************************************************************
 
-Day 67 (3/1/2025)
+Day 67 (3/1/2025) && Day 68 (4/1/2025)
 
 Framework is like a house
 
@@ -3442,8 +3442,6 @@ Cucumber Structure
 
 ProjectName
 	src/main/java
-	src/main/resources
-	src/test/java
 		Base package
 			Base class - where we initiate web driver
 		Utilities package
@@ -3456,6 +3454,9 @@ ProjectName
 			Step definition files
 		Runner package
 			Runner files
+	src/main/resources
+		Folder where we keep files which needed for creating/supporting our methods
+	src/test/java
 	src/test/resources
 		Features (folder)
 			* Each feature files
