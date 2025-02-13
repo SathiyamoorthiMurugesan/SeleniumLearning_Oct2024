@@ -17,7 +17,7 @@ Reception related things(table, phone, receptionist, computer) - static - belong
 
 Paper, pen, water can, water bottle, table, chairs, chalan - anyone can access - public
 Receptionist mobile, person's mobile/money/bike - private
-Documents - protected
+Documents, rooms  - protected
 People - default
 
 Access Modifier - public, private, protected and default
@@ -3477,7 +3477,21 @@ Cucumber extent report
 
 
 
+******************************************************************
 
+Tell me about yourself
+	* Name
+	* Education
+	* Company	
+	* Manual and Automation testing experience
+	* What are the technologies you know
+		* Java, Selenium
+	* What are the tools you know
+		* Eclipse, Jira, Rally
+	* What are the Automation framework you know
+		* Data driven framework with TestNG
+		* Behaviour driven framework with Cucumber/Junit
+	
 
 
 
