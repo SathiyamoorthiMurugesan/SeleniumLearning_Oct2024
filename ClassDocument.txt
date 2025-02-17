@@ -39,16 +39,19 @@ VARIABLE COMMON SYNTAX
 	accessModifer datatype variableName = variableValue;
 
 
-Method - room
+Method - room- specific work
 	* Whatever happens inside is not visible to outside or other methods/rooms
 	* We can bring things from reception/hall to a method
 	* But we can not bring a thing from method/room to outside. In order to do that, we need to follow a process
 		- RETURN TYPE
-	* Most of the time method wont give us anything - VOID
+	* Most of the time method wont give us anything - VOID 
 
 METHOD COMMON SYNTAX 
 	- AccessModifer returnType methodName() { }
-	- public void incomeTaxCertificateProcess() {
+	- public/private/protected void incomeTaxCertificateProcess() {
+		
+		}
+	-  void incomeTaxCertificateProcess() {
 		
 		}
 
@@ -65,17 +68,24 @@ CLASS COMMON SYNTAX
 public class TalukOffice {
                                      
 public chair red = 20;
-private chair red = 2;      
+private chair red = 2; 
+protected table wooden = 5; 
+table plastic = 10;
+public person token21 = "Karthick";
+     
 
 	- public void incomeTaxCertificateProcess() {
-		 
+		 fdjshjfksk
+		 fdjshfjs
+		 fdjshj
 		}
 	- public void MarriageCertificateProcess() {
 		
 		}
 
-public chair red = 20;
-private chair red = 2; 
+public chair red = 20; //can be written within the class but outside the methods 
+private chair red = 2;
+
 
 	- private void staffRoom() {
 
@@ -100,7 +110,7 @@ private chair red = 2;
 * incomeTaxCertificateProcess - camelCase
 	- class names should start with CAPITAL LETTER and followed by camelCase
 	- method/variable names should start with SMALL LETTER and followed by camelCase
-	- all the java keywords starts with SMALL LETTER such as class, public, void etc.
+	- all the java keywords starts with SMALL LETTER such as class, access modifiers(e.g:public), void etc.
 
 
 People administration - package
@@ -115,7 +125,7 @@ Chennai Taluk Office - Parent/Super class
 Velachery Taluk Office - Parent class
 Velachery East Taluk Office - Child/Sub class 
 
-public class ChennaiTalukOffice() {}
+public class ChennaiTalukOffice {}
 public class VelacheryTalukOffice extends ChennaiTalukOffice { }
 public class VelacheryEastTalukOffice extends VelacheryTalukOffice { }
 
@@ -129,6 +139,14 @@ COMMON SYNTAX FOR INTERFACE
 	- public interface PeopleAdministrationRules {
 	
 	}
+	
+public interface ChennaiTalukRules {
+
+ public void MarriageCertificateProcessRules();
+
+	public void IncomeCertificateProcessRules();
+
+}
 
 **************************************************************
 Day 3 (09/10/2024)
@@ -157,14 +175,32 @@ public interface PeopleAdministrationRules implements ChennaiTalukOffice {
 
 }
 
+
+class follows class - extends 
+interface follows interface - extends 
+class follows interface - implements 
+interface follows class - NOT POSSIBLE
+
+
 same entity - extends 
 different entity - implements
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-ChennaiGovtHospital conducts medical camp inside the campus - This event equal to Object Creation or Object Initiation or Object Instantiation in Java
+ChennaiGovtHospital conducts medical camp inside the campus 
+	- This event equal to Object Creation or Object Initiation or Object Instantiation in Java
+	
+Things to remember when you say Object or Object creation	
+Class
+Copy
+non-static
+multiple objects for a single class are also possible
+created for same class or created in different class 
 
-ClassName objectName/ObjectName = new  ClassName();
+OBJECT CREATION SYNTAX 
+AccessModifier ClassName objectName/ObjectName = new  ClassName();
+
+
 ChennaiGovtHospital MedicalCamp = new ChennaiGovtHospital();
 ChennaiGovtHospital BloodDonationCamp = new ChennaiGovtHospital();
 ChennaiGovtHospital EyeTestCamp = new ChennaiGovtHospital();
@@ -194,6 +230,8 @@ CONSTRUCTOR COMMON SYNTAX
 		
 METHOD SYNTAX
 	- AccessModifier returnType methodName() {  }
+	public void marraigeCertificateProcess() {
+	}
 	
 
 1) Constructor do not have return type;
@@ -202,7 +240,7 @@ METHOD SYNTAX
 
 
 STATIC  - keyword
-		- belongs the class
+		- belongs to the class
 		
 	
 	Reception chair, reception telephone, reception table, receptionist
@@ -216,14 +254,14 @@ Outside of Taluk Office and within PoliceStation -
 	- We call the TO receptionsit as TO receptionist
 	- POlice Station receptionist
 	
-public chair red = 10 
+public chair red = 10 - non-static
 static public chair red = 10;
 public static chair red = 10;
 
 public static void method1() {   }
 static public void method2() {   }
 
-
+public static class ClassName {   } - NOT POSSIBLE
 
 
 Methods
@@ -304,10 +342,17 @@ Day 4 (10/10/2024)
 
 * Project - consist of package/packages/file/files/folder/folders/source(src)folder
 
+
+	* src/main/java
+	* src/main/resources
 src/main - development related codes and its supporting files
-	java/resources
+		
+	* src/test/java
+	* src/test/resources
 src/test - test case or testing related codes and its supporting files
-	java/resources
+
+	
+
 
 * static - static means belongs to the class. If govt hospital is class, then hospital receptionist is a static member of that class. 
                  We can not seperate them. variables and methods can be static
