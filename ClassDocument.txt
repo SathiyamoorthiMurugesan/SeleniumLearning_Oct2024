@@ -314,6 +314,7 @@ Project
 			ClassAB
 		ClassB
 		ClassC
+		Files1
 	- package2
 		ClassA
 		ClassB
@@ -321,6 +322,9 @@ Project
 	- package3
 		ClassX
 		ClassA
+	Files2
+	Folders
+	
 
 *************************************************************
 Day 4 (10/10/2024)
@@ -403,8 +407,26 @@ Git Repository - Repo- Remote - Remote project
 	* git remote add origin "repository's SSH path" - we are introducing online repository to local git 
 	* git push origin master
 	* git status
-	
 	* git config --global user.email "";
+	* git config --global user.name "";
+	
+Need to add ssh token of your Eclipse into your Github
+To generate the ssh key in Eclipse 
+	Go to window -> preferences -> search for SSH
+	click SSH2
+	Go to keyManagement
+	generate RSA token 
+	save it in the default path (which would be .ssh folder in your system)
+	Open the .ssh folder 
+	open the pub file in notepad 
+	copy  the ssh-rsa entire string
+Go to gihub
+	Your profile -> Settings -> SSH settings ->
+	click Add new key
+	Give title and paste the key
+	save it
+	
+Now you can push your files easily 
 	
 	
 **********************************************************
@@ -414,7 +436,7 @@ Maven - Dependencies management tool
 
 other such tools - Gradle, ant
 
-	* Difficulties in adding a .jar file into our project
+	* Difficulties in adding a .jar file into our project, downloading the dependencies or upgrade/degrading it
 	* .M2 folder stores the dependencies added in pom.xml file
 	* Maven projects gives us a proper project structure
 	
@@ -466,6 +488,51 @@ Different ways to import a maven project into Eclipse
 	* clone the project using eclipse and followed by import the existing project into Eclipse
 	* clone the project in git perspective and import the existing project into Eclipse
 	* download the project into your local and import the existing project into Eclipse
+	
+How to import a project from repository to your local(your system) - using eclipse alone 
+
+1. You should be having access to the repository(repo) you are going to clone.
+2. Ask the repo owner to add you as a collabarator to that repo. 
+3. Go the the repo in github
+4. Click on code and copy the ssh path 
+5. Open Eclipse 
+6. File -> import or in package Explorer, right click on the empty space and click on import.
+7. Select Git -> Project from git -> next 
+8. Select repo source -> clone url
+9. Source git repo - paste the URI (usally it will be pasted automatically, if you have copied the ssh url then no change are needed) -> next
+10. Branch selection - choose what the branches you want -> next
+11. Local Destination - path will come automatically(recommended). if you want to change you can change otherwise dont -> next
+(After the above step, in your local, you can see the project.)
+12. Select Wizard -> choose import existing eclipse project  
+
+How to import a project from repo to your local using git bash and eclipse 
+1. You should be having access to the repository(repo) you are going to clone.
+2. Ask the repo owner to add you as a collabarator to that repo. 
+3. Go the the repo in github
+4. Click on code and copy the ssh path 
+5. Open git folder from user directory (c:/user/username/)
+6. Open Git Bash
+7. Type git clone "copied ssh uri"
+8. Now you can see the project in git folder in your local 
+9. Open Eclipse
+10. File -> import -> select maven - existing maven project ->next 
+11. Choose the project path (c:/user/username/git/YourProjectName) -> next
+12. On the next page click finish
+13. Now you can see the project in your eclipse
+
+How to import a project which is available in your system
+1. Open Eclipse
+2. import 
+3. Maven -> Existing maven projects -> next
+4. Choose the project path where you kept your downloaded project -> next
+5. On the next page click finish
+6. Now you can see the project in your eclipse
+
+
+
+
+
+ 
 	
 * What is .gitignore file and how it works 
 
