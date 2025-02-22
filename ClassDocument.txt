@@ -528,10 +528,8 @@ How to import a project which is available in your system
 5. On the next page click finish
 6. Now you can see the project in your eclipse
 
-
-
-
-
+Below line is for demonstrating the Eclipse git
+Hello Eclipse
  
 	
 * What is .gitignore file and how it works 
