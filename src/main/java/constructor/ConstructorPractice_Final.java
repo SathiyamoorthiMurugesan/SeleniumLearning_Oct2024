@@ -18,6 +18,7 @@ public class ConstructorPractice_Final {
 	}
 
 	public ConstructorPractice_Final(int interest1) {
+//		interest1 = interest1;
 		this.interest1 = interest1;
 		this.interest2 = interest1;
 //		interest2 = interest1;
@@ -45,7 +46,7 @@ public class ConstructorPractice_Final {
 
 	public void method1() {
 		System.out.println("I am method1");
-		int processingFee = interest1+ 0;
+		int processingFee = interest1+ 1000;
 		System.out.println(processingFee);
 //		interest1 = 11;
 	}

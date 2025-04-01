@@ -1,14 +1,19 @@
+package keywordsInJava;
+
+
 //* final is a keyword in java
 //* final can be used with variables, methods and classes
-//* If we declare a variable as final, the value of the variable can not be changed ANYWHERE
+//* If we declare a variable as final, the value of the variable can not be changed ANYWHERE once initialized
+
 //* If a method is declared as final, then we can not override it
 //* If a method is declared as final, then we can overload it
+
 //* If we use final keyword with a class, no class can inherit(extend) it
 //		e.g String class in Java--> String is a final class in java
 //* we can not create interface as final. There is no point in using final with interface
 //* variables declared in interface are final in nature
 //* Variable/method can be declared as final in both static and non static methods
-//*	Variables declared as final in class level must be initialized whereas variables declared as final inside a method need not be initialized
+//*	Variables declared as final in class level must be initialized whereas variables declared as final inside a method need not be initialized while declaring
 //* Variables declared as final in class level need to initialized in all the constructors if they are not initialized while declaring
 
 //finalize() method
@@ -18,7 +23,6 @@
 //This method is defined in the Object class and can be overridden by any class. 
 //The purpose of the finalize() method is to give an object the opportunity to clean up resources 
 //before it is reclaimed by the garbage collector.
-//package keywordsInJava;
 
 public class FinalDemo extends ParentFinal implements FinalInterface {
 	
@@ -28,6 +32,7 @@ public class FinalDemo extends ParentFinal implements FinalInterface {
 
 	final int a = 10;
 	final int b;
+//	final int c;
 	int aa = 100;
 	String str;
 

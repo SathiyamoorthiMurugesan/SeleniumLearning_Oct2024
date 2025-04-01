@@ -17,6 +17,7 @@ public class StaticBasic {
 //	After OOPS concept
 //		* If we keep all the methods and variables of an class as static, that class is called tightly encapsulated class
 //		* we can overload a static method but we can not override a static method
+//		* In Interface or in Abstract class, we can create static method with body but we can not create abstract or bodyless method as static.
 	
 //	After interface
 //		 * In interface, we can create a methods with body but that method should be either static or default

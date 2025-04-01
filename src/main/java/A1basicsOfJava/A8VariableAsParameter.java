@@ -4,7 +4,7 @@ public class A8VariableAsParameter {
 	
 //	Variables as parameters in detail
 //	* Parameterized variables are considered as local variables.
-//	* It helped to run a single method with multiple values of given data type.
+//	* It helps us to run a single method with multiple values of same data type.
 //	* Parameterized variables can be anything, such as Primitive, non primitive, Class, Interface, Object
 //	* Generally we can not write two or methods with same method name. 
 //		But we can achieve it using parameters

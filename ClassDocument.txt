@@ -586,10 +586,11 @@ Day 8 (17/10/2024)
 
 Class - important thing, through which we perform some task. Class may contains methods and variables
 
-Method1 - A work
-Method2 - B work
+Method1 - A work - 10 lines of codes
+Method2 - B work - 10 lines of codes
 Method3 - C work ( A work + some other work = method1 + some other work)
-
+				 (	
+No duplicate codes
 redundant - repeatable 
 reuse
 No. of line will reduce 
@@ -615,6 +616,9 @@ Syntax:-
 
 Datatype: Its a classification of a data, which tells the compiler or interpreter 
 about how the programmer intends to use the data.
+
+Syntax of variables
+AccessModifier datatype variableName = variableValue
 
 1) Primitive
 	a) boolean - yes or no OR true or false 
@@ -647,6 +651,16 @@ about how the programmer intends to use the data.
 		5) float
 			* float gg = 2.5f;
 			* default value = 0;
+			
+Data Type	Description
+byte	Stores whole numbers from -128 to 127
+short	Stores whole numbers from -32,768 to 32,767
+int		Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	Stores fractional numbers. Sufficient for storing 15 to 16 decimal digits
+boolean	Stores true or false values
+char	Stores a single character/letter or ASCII values
 
 2) Non Primitive
 	d) String - In java, String is a Non-Primitive data type but at the same time its a Class.
@@ -661,7 +675,7 @@ a = 10; - define/initiate/assign
 int a = 10 - declare and initiate
 
 int a = 10;
-deafult - access modifier
+default - access modifier
 int - data type( primitive --> numeric)
 a - variable/variableName;
 10 - value posses by the variable/ value pointed by the variable
@@ -1062,7 +1076,7 @@ How to read object's suggestions.
 Day 14 (24/10/2024)
 
 
-Object creation - to call non-static members
+Object creation - to call non-static members (variables and methods)
 
 Within class we can have both static and non-static member. 
 
@@ -1073,8 +1087,8 @@ Within class we can have both static and non-static member.
 4) We can create multiple Objects for a single class (within class or outside class)
 
 Syntax:-
-ClassName objectVariableName = new ClassName();
-ClassA anyName = new ClassName();
+ AccessModifier ClassName objectVariableName = new ClassName();
+	ClassName anyName = new ClassName();
 
 GovtHospital medicalCamp = new GovtHospital();
 GovtHospital eyeCamp = new GovtHospital();
@@ -1098,8 +1112,10 @@ SCP (String Constant Pool - A part of heap memory)
 
 ClassA obj1 = new ClassA();
 
+AccessModifer - default
+Non-static
 ClassA - Reference Class Name
-Obj1 - Object variable
+Obj1 - Object variable name
 new = key word to create an obj
 ClassA() - Constructor or Object creation or instance creation
 
@@ -1128,9 +1144,9 @@ public void method2() {
 }
 
 	stack memory			Heap memory
-	obj1.				a = 10; method1(), method2();
-	obj2				a = 10; method1(), method2();
-	obj3				a = 10; method1(), method2(); 
+	obj1.				new ClassA() - it represents the non-static members in the class
+	obj2				new ClassA() - it represents the non-static members in the class 
+	obj3				new ClassA() - it represents the non-static members in the class
 	
 	* In heap memory, only one copy of every class is available if you create multiple object 
 		for that class. So that we can save the memory space in heap memory.
@@ -1150,10 +1166,10 @@ There are two ways to create String in Java
 2. Object creation
 
 String Literals
-	String Sathya = "1000"; 
+	String str = "Sathya";
 	
-Sathya - Stack
-1000 - SCP of Heap memory 
+str - Stack
+Sathya - SCP of Heap memory 
 	
 Object creation for String
 	ClassA obj1 = new ClassA(); //its simple object creation

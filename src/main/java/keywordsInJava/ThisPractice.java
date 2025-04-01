@@ -28,11 +28,14 @@ public class ThisPractice {
 	
 	public void method2(int abcd) {
 		System.out.println(abcd);
+		
 		System.out.println(abcd);
+		
 		ThisPractice obj = new ThisPractice();
 		System.out.println(obj.abcd);
 		
 		System.out.println(this.abcd);
+		System.out.println(str);
 		System.out.println(this.str);
 		
 		
@@ -40,7 +43,23 @@ public class ThisPractice {
 		System.out.println(b);
 //		obj.b; variable b is a local, so its not visible to object variable.
 		
+	}
+	
+	public void method3(int x) { 
 		
+		System.out.println(x);
+		System.out.println(abcd);
+	}
+	
+	public void method4() {
+		int a = 10;
+		
+		System.out.println(a);
+		
+		int abcd = 20;
+		System.out.println(abcd);
+		
+		System.out.println(this.abcd);
 	}
 
 }

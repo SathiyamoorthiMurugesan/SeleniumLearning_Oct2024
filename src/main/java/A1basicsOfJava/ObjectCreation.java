@@ -3,23 +3,36 @@ package A1basicsOfJava;
 public class ObjectCreation {
 //public class ObjectCreation extends Object {
 	
+	
+//	* Whenever we want to use non static variables/methods, we need to create object for the
+//	respective class.
+	
+//	* DEFINITION
+//	* Whenever we create an Object for a class, whatever non-static members present in that class
+//		will be copied and stored in heap memory
+//	* Syntax for object creation
+//		ClassName ObjectName = new ClassName();
+//		ReferenceClassName ObjectVariableName = new ConstructorOfClassForWhichWewantToCreateObject();
+//		ClassA obj = new ClassA();
+//	* We call it as Object instantiation or Object creation
+//	* We create object only for classes
+//	* For a single class, we can create multiple objects (either within class or outside class)
+//	* We can also create object of a class inside some other class
+	
+	
+	
+	
 //	* Java is a Object Oriented Programming language.
 //	* But its not 100% OOPs language.
 //	* Almost everything in Java is based on Object only
 //	* Super most class of Java is Object class
 //	* Whatever class we create, it always follows Object class by default. 
 //	* Object class also, contains methods and variables 
-//	* Whenever we want to use non static variables/methods, we need to create object for the
-//		respective class.
-//	* We call it as Object instantiation or Object creation
-//	* We create object only for classes
-//	* Syntax for object creation
-//		ReferenceClassName ObjectVariableName = new ConstructorOfClassForWhichWewantToCreateObject();
-//		ClassA obj = new ClassA();
-//	* For a single class, we can create multiple objects (either within class or outside class)
-//	* DEFINITION
-//		* Whenever we create an Object for a class, whatever non-static members present in that class
-//			will be copied and stored in heap memory
+
+
+
+
+
 			
 	int a = 10;
 	private String b = "Sathya";

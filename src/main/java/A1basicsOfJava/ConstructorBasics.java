@@ -15,6 +15,7 @@ package A1basicsOfJava;
 // * When the default constructor was implicitly present and you create a Constructor with parameter
 //		* Then the default constructor will vanish. 
 //		* Which means, we can not create a object for the class using default constructor.
+// * If you want default constructor along with parameterized constructors, then you need to explicitly write the default constructor
 // * We can create a constructor using public, private, protected and default(do not use the keyword)
 //		* When Constructors is private, we can not create object of that class in other classes.
 

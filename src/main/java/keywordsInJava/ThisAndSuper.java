@@ -2,7 +2,7 @@ package keywordsInJava;
 
 //*****this keyword and this()************************
 
-//* this. keyword is used to call instance/class variables and methods. 
+//* this. keyword is used to call instance/class variables and methods within a class
 //* this. keyword is always present implicitly when we call instance/class variables and methods within the class.
 //	* We can use this., to differentiate run time variables/local variable from instance variables;
 //	* Also by using this., we can assign runtime values to instance variables
