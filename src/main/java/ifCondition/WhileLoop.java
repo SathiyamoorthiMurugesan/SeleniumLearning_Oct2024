@@ -1,4 +1,4 @@
-package ifLoop;
+package ifCondition;
 
 public class WhileLoop {
 

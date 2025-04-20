@@ -1,8 +1,20 @@
 package exceptionLearning;
 
-import java.io.IOException;
-
 public class ExceptionPractice {
+	
+	
+	
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 0;
+		int c ;
+		
+		c = a/b;
+		System.out.println(c);
+		
+	}
+	
+	/*
 
 	public static void main(String[] args) {
 
@@ -63,4 +75,6 @@ class ATMPractice {
 
 	}
 
+*/
 }
+

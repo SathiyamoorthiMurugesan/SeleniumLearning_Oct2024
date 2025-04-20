@@ -38,7 +38,9 @@ public class Throws {
 		}
 	}
 	
-	public void methodB() throws IOException {
+//	public void methodB() throws IOException {
+//	public void methodB() throws Exception {
+	public void methodB() throws IOException, Exception {
 		System.out.println("throw exception");
 		throw new IOException();
 	}
@@ -46,12 +48,17 @@ public class Throws {
 	public void readAFile() throws FileNotFoundException {
 		FileReader reader = new FileReader("C:\\Users\\LENOVO\\git\\JavaProject_SelviAndYugendhar\\src\\main\\java\\exceptionLearning\\exception123.txt");
 	}
+	
+	public static void main(String[] args) throws Exception {
+		Throws obj = new Throws();
+		obj.methodB();
+	}
 
 //		public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
 //	public static void main(String[] args) throws IOException, ClassNotFoundException {
 //	public static void main(String[] args) throws IOException, Exception, ClassNotFoundException {
 //	public static void main(String[] args) {
-	public static void main(String[] args) throws Exception {
+	public static void main1(String[] args) throws Exception {
 		
 
 //		throw new IOException();
