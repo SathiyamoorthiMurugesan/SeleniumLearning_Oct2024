@@ -2084,6 +2084,15 @@ Automation tools
 	* PlayWrite
 	* RPA - Robotic process automation
 	
+Programming language
+	* Java
+	* Python
+	* .Net
+	* Ruby
+	* C##
+	* TypeScript
+	* JavaScript
+	
 Editor 
 	* Eclipse
 	* STS - Sprint Tool Suite
@@ -2177,8 +2186,8 @@ What are the actions we do in an application (click, write, drag and drop, scrol
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-* In manual testing, we do the testing 
-* In Automation, who would work as a tester - WebDriver
+* In manual testing, we do the testing - (we are the tester)
+* In Automation, who would work as a tester - WebDriver (it is the automation tester)
 
 WebDriver - interface
 
@@ -2366,17 +2375,24 @@ getCssValue();
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-Whatever element you see on a web page is called WebElement
-
 What is WebElement
-	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
-	
+	* Whatever element you see on a web page is called WebElement
+	* It is a interface which follows SearchContext (In Java)
+
+How do you find or interact with a WebElement:
+
+	* WebElements in a web page are represented by HTML tags
+	  
+
 	What is DOM in browser
 The Document Object Model (DOM) is a programming interface for web documents. 
 It represents the page so that programs can change the document structure, style, and content. 
 Essentially, the DOM provides a structured representation of the document (as a tree of objects), 
 and it defines a way that the structure can be accessed from programs 
 so that they can change the document's content, structure, and style.
+
+How do you open the DOM of a web page
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
 	
 	* diff types of tags
 		* html
@@ -2386,14 +2402,15 @@ so that they can change the document's content, structure, and style.
 		* input
 		* div
 		* ul
-		* li
+			* li
 		* a 
 		* svg
 		* select (drop down)
+			* option
 		* frame or iframe (small html)
 		* table
-			* th 
-			* tr
+			* tr 
+			* th
 			* td
 			
 		* <table>
@@ -2403,10 +2420,15 @@ so that they can change the document's content, structure, and style.
 					<th>
 					<th>
 					<th>
+					<th>
 				<tr>
 					<td>
 					<td>
+					<td>
+					<td>
 				<tr>
+					<td>
+					<td>
 					<td>
 					<td>
 					
@@ -2515,7 +2537,7 @@ XPATH - xml path
 
 two types of xpath
 
-Absolutet xpath 
+Absolute xpath 
 Relative xpath 
 
 1) absolute xpath - like using steps 
@@ -2535,7 +2557,9 @@ Relative xpath
 Relative xpath
 
 Syntax
-//tagName[@attributeName = 'value']OR //*[@attributeName = 'value'] OR //tagName[@attributeName = "value"] 
+//tagName[@attributeName = 'value']OR -- Most preferred
+//*[@attributeName = 'value'] OR 
+//tagName[@attributeName = "value"] 
 
 String xpath = "//tagName[@attributeName = \"value\"]"
 
@@ -2569,10 +2593,10 @@ Why element is not found, because we wrongly identified the element
 1) spelling mistake
 2) flow mistake
 3) xpath wrong
-4) timing
+4) timing - synchronization between code run and web page loading
 
 StaleElementException
-	* Element is available in DOM but not visible in UI
+	* Element is available in DOM but is not in the old state as before in UI or not visible in UI
 		
 https://www.guru99.com/xpath-selenium.html#text
 https://www.guru99.com/locators-in-selenium-ide.html
@@ -2583,19 +2607,41 @@ How do you open a web site in your system?
 
 Chrome browser and ChromeDriver difference.
 
+Chrome Browser
+What it is: Google Chrome is a web browser used by people to browse websites.
+
+Purpose: It is designed for human interaction, displaying websites, running web apps, and accessing online content.
+
+ChromeDriver
+What it is: ChromeDriver is a separate executable that WebDriver (from Selenium, for example) uses to control the Chrome browser.
+
+Purpose: It acts as a bridge between test scripts and the Chrome browser.
+
 Compatibility issue. 
 
 To manage compatibility issue, we have 
 WebDriverManager - we will see it later 
 
+WebDriverManager automates all of this. It:
+
+Downloads the appropriate driver version.
+
+Sets the path automatically.
+
+Keeps drivers up to date.
+
 Selenium - its a tool to automate web application. 
+
+Official website - https://www.selenium.dev/
+
+Selenium 3 and 4 difference
 
 Selenium is written in many languages 
 	Java
 	Python
-	C#
+	C# (.Net)
 	Ruby
-	.Net
+	JavaScript
 	
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -2681,8 +2727,6 @@ Browsers
 * HeadlessBrowser
 
 How they used browser in Selenium 
-
-
 
 Diff between Chrome browser and Chrome driver 
 
@@ -2939,15 +2983,20 @@ Nested html page available inside original webpage - frame/iframe - tag names
 	b) switch into the iframe/frame --> driver.switchTo().frame(int index);
 									-->  driver.switchTo().frame(String frameName);
 									-->  driver.switchTo().frame(WebElement ele);
-	c) to go back to the original html or parent iframe/frame
+	c) access the element 
+	d) to go back to the original html or parent iframe/frame
 		--> driver.switchTo().defaultContent();
 		
 
 * frames can be nested. Each time you access an element in a frame, you need to switch to it. 	
 <html>
 	<iframe>
+		<div> </div>
 		<frame>
-				<div>
+				<div></div>
+		</frame>
+	</iframe>
+</html>
 				
 div - is our element 
 	1) from here if you user driver.switchTo().parentFrame(); --> driver focus moves to <frame>
